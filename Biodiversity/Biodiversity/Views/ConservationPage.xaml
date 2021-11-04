@@ -10,9 +10,7 @@
                 VerticalOptions="StartAndExpand" 
                 HorizontalOptions="CenterAndExpand"/>
             </Frame>
-            <Label Text="Welcome to the Conservation Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="conservationListView"></ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
