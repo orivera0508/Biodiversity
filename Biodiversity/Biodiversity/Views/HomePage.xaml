@@ -1,52 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="Biodiversity.Views.HomePage"
              xmlns:vm="clr-namespace:Biodiversity.ViewModels"
              Title="{Binding Title}">
-    
+
     <ContentPage.BindingContext>
         <vm:HomeViewModel />
     </ContentPage.BindingContext>
     
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="Accent">Blue</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
-                </ContentView>
-            </StackLayout>
-        </StackLayout>
-        <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Start developing now" FontSize="Title"/>
-                <Label Text="No Branch Required" FontSize="16" Padding="0,0,0,0"/>
-                <Label FontSize="16" Padding="0,24,0,0">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Learn more at "/>
-                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Button Margin="0,10,0,0" Text="Learn more"
+    <xct:TabView>
+        <xct:TabViewItem Text="Welcome!" TextColorSelected="Green">
+            <xct:TabViewItem.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <!--
+                    <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                            <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                                <Label Text="Tab View testing" FontSize="Title"/>
+                            </ContentView>
+                        </StackLayout>
+                    </StackLayout>
+                    <ScrollView Grid.Row="1">
+                        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                            <Label Text="Testing" FontSize="Title"/>
+                            <Label Text="No Branch Required" FontSize="16" Padding="0,0,0,0"/>
+                            <Label FontSize="16" Padding="0,24,0,0">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span Text="Learn more at "/>
+                                            <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Button Margin="0,10,0,0" Text="Learn more"
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
-            </StackLayout>
-        </ScrollView>
-    </Grid>
+                        </StackLayout>
+                    </ScrollView>
+                    -->
+
+                    <StackLayout  Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BackgroundColor="Black">
+                        <StackLayout>
+                            <ContentView VerticalOptions="FillAndExpand">
+                                <Image Source="wallpaper_forest.jpg" />
+                            </ContentView>
+                        </StackLayout>
+                    </StackLayout>
+
+                </Grid>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+        <xct:TabViewItem Text="What's New" TextColorSelected="Green">
+            <xct:TabViewItem.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <ScrollView Grid.Row="1">
+                        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10" BackgroundColor="#4caf50">
+                            
+                        </StackLayout>
+                    </ScrollView>
+
+                </Grid>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+    </xct:TabView>
 
 </ContentPage>
