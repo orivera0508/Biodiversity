@@ -13,12 +13,16 @@ namespace Biodiversity.Models
         public float Lng { get; set; }
 
         public string Type { get; set; }
+
+        //Description of species
         public string Desc { get; set; }
 
         //public string Trivia { get; set; }
 
         public string ImageName { get; set; }
 
-        public byte ImageFile { get; set; }
+        //Store image path and then display it
+        //Just a design idea, waiting for approval... 
+        public string ImagePath { get; set; }
     }
 }
