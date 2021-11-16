@@ -3,6 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Biodiversity.Views.PlantPage"
              Title="Plant">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="icon_search.png" 
+                    Command="{Binding SearchCommand}"
+                    Order="Primary"
+                    Priority="0" />
+        <ToolbarItem IconImageSource="icon_bird.png" 
+                    Command="{Binding AnimalsPageCommand}"
+                    Order="Primary"
+                    Priority="0" />
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Plant Page!"

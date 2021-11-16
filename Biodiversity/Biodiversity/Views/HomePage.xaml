@@ -16,6 +16,19 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
+    <!--Buttons towards Plant and Animal Page-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="icon_palm.png" 
+                    Command="{Binding PlantsPageCommand}"
+                    Order="Primary"
+                    Priority="0" />
+        <ToolbarItem IconImageSource="icon_bird.png" 
+                    Command="{Binding AnimalsPageCommand}"
+                    Order="Primary"
+                    Priority="0" />
+    </ContentPage.ToolbarItems>
+
+    <!--Welcome Page-->
     <xct:TabView>
         <xct:TabViewItem Text="Welcome!" TextColorSelected="Green">
             <xct:TabViewItem.Content>
@@ -65,6 +78,8 @@
                 </Grid>
             </xct:TabViewItem.Content>
         </xct:TabViewItem>
+        
+        <!--Whats New Page-->
         <xct:TabViewItem Text="What's New" TextColorSelected="Green">
             <xct:TabViewItem.Content>
                 <Grid>
