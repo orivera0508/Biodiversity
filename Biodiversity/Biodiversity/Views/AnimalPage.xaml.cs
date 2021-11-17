@@ -16,5 +16,11 @@ namespace Biodiversity.Views
         {
             InitializeComponent();
         }
+
+        void OnPlantClicked(object sender, EventArgs e)
+        {
+            ToolbarItem item = (ToolbarItem)sender;
+            Navigation.PushAsync(new PlantPage());
+        }
     }
 }

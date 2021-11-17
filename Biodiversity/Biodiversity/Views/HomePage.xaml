@@ -20,10 +20,12 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="icon_palm.png" 
                     Command="{Binding PlantsPageCommand}"
+                    Clicked="OnPlantClicked"
                     Order="Primary"
                     Priority="0" />
         <ToolbarItem IconImageSource="icon_bird.png" 
                     Command="{Binding AnimalsPageCommand}"
+                    Clicked="OnAnimalClicked"
                     Order="Primary"
                     Priority="0" />
     </ContentPage.ToolbarItems>
