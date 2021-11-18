@@ -6,19 +6,17 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="icon_search.png" 
+                    x:Name="searchButton"
                     Command="{Binding SearchCommand}"
+                    Clicked="OnSearchClicked"
                     Order="Primary"
                     Priority="0" />
     </ContentPage.ToolbarItems>
-
     <ContentPage.Content>
-        <StackLayout>
-            <Frame>
-                <SearchBar Placeholder="Search items..."
-                VerticalOptions="StartAndExpand" 
-                HorizontalOptions="CenterAndExpand"/>
-            </Frame>
-            <ListView x:Name="conservationListView"></ListView>
+        <StackLayout x:Name="StackLayout">
+            <Label Text="Welcome to Conservartion Page!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -22,5 +22,12 @@ namespace Biodiversity.Views
             base.OnAppearing();
             
         }
+
+        void OnSearchClicked(object sender, EventArgs e)
+        {
+            searchButton.IsEnabled = false;
+            SearchBar searchBar = new SearchBar { Placeholder = "Search items..." };
+            StackLayout.Children.Insert(0, searchBar);
+        }
     }
 }

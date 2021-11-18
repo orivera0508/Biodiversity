@@ -6,7 +6,9 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="icon_search.png" 
+                    x:Name="searchButton"
                     Command="{Binding SearchCommand}"
+                    Clicked="OnSearchClicked"
                     Order="Primary"
                     Priority="0" />
         <ToolbarItem IconImageSource="icon_bird.png" 
@@ -17,7 +19,7 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout x:Name="StackLayout">
             <Label Text="Welcome to Plant Page!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />

@@ -21,5 +21,11 @@ namespace Biodiversity.Views
             ToolbarItem item = (ToolbarItem)sender;
             Navigation.PushAsync(new AnimalPage());
         }
+        void OnSearchClicked(object sender, EventArgs e)
+        {
+            searchButton.IsEnabled = false;
+            SearchBar searchBar = new SearchBar { Placeholder = "Search items..." };
+            StackLayout.Children.Insert(0, searchBar);
+        }
     }
 }
