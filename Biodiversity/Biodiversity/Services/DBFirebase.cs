@@ -11,21 +11,14 @@ namespace Biodiversity.Services
 {
     class DBFirebase
     {
-        FirebaseClient client;
-        private int id;
-        private string name;
-        private float lat;
-        private float lng;
-        private string desc;
-        private string imageName;
-        private string imagePath;
+        FirebaseClient client;        
 
         public DBFirebase()
         {
             client = new FirebaseClient("https://biodiversity-b2d4d-default-rtdb.firebaseio.com/");
         }
 
-        public ObservableCollection<Animal> getAnimal()
+        public ObservableCollection<Animal> GetAnimal()
         {
             var animalData = client
                 .Child("Animals")
@@ -35,9 +28,9 @@ namespace Biodiversity.Services
             return animalData;
         }
 
-        public async Task AddAnimal(int Id, string Name, float Lat, float Lng, string Type, string Desc, string ImageName, string ImagePath)
+        public async Task AddAnimal(int id, string name, float lat, float lng, string desc, string imageName, string imagePath)
         {
-            Animal a = new Animal() { Id = id, Name = name, Lat = lat, Lng = lng, Type = Type, Desc = desc, ImageName = imageName, ImagePath = imagePath };
+            Animal a = new Animal() { Id = id, Name = name, Lat = lat, Lng = lng, Desc = desc, ImageName = imageName, ImagePath = imagePath };
             await client
                 .Child("Animals")
                 .PostAsync(a);

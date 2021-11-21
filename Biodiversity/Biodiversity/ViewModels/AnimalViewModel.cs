@@ -17,7 +17,7 @@ namespace Biodiversity.ViewModels
         public string Name { get; set; }
         public float Lat { get; set; }
         public float Lng { get; set; }
-        public string Type { get; set; }
+        //public string Type { get; set; }
         public string Desc { get; set; }
         //public string Trivia { get; set; }
         public string ImageName { get; set; }
@@ -41,13 +41,13 @@ namespace Biodiversity.ViewModels
         public AnimalViewModel()
         {
             services = new DBFirebase();
-            Animals = services.getAnimal();
-            AddAnimalCommand = new Command(async () => await addAnimalAsync(Id, Name, Lat, Lng, Type, Desc, ImageName, ImagePath));
+            Animals = services.GetAnimal();
+            AddAnimalCommand = new Command(async () => await addAnimalAsync(Id, Name, Lat, Lng, Desc, ImageName, ImagePath));
         }
 
-        public async Task addAnimalAsync(int Id, string Name, float Lat, float Lng, string Type, string Desc, string ImageName, string ImagePath)
+        public async Task addAnimalAsync(int Id, string Name, float Lat, float Lng, string Desc, string ImageName, string ImagePath)
         {
-            await services.AddAnimal(Id, Name, Lat, Lng, Type, Desc, ImageName, ImagePath);
+            await services.AddAnimal(Id, Name, Lat, Lng, Desc, ImageName, ImagePath);
         }
     }
 }

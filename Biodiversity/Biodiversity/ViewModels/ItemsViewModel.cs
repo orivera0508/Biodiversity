@@ -12,10 +12,10 @@ namespace Biodiversity.ViewModels
     {
         private Item _selectedItem;
 
-        public ObservableCollection<Item> Items { get; }
+        private ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<Item> ItemTapped { get; }
+        private Command<Item> ItemTapped { get; }
 
         public ItemsViewModel()
         {

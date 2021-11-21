@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Biodiversity.ViewModels" x:DataType="viewmodels:AnimalViewModel"
              x:Class="Biodiversity.Views.AnimalPage"
              Title="Animal">
 
@@ -17,12 +17,85 @@
                     Order="Primary"
                     Priority="0" />
     </ContentPage.ToolbarItems>
-
     <ContentPage.Content>
-        <StackLayout x:Name="StackLayout">
-            <Label Text="Welcome to the Animal Page!"
+        
+        <!--<Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout x:Name="StackLayout" VerticalOptions="Start">
+                <Label Text="Welcome to the Animal Page!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+                <ListView ItemsSource="{Binding Animals}"  BackgroundColor="LightBlue" HorizontalOptions="CenterAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal"  Padding="20,20,20,0">
+                                    <Label Text="{Binding Name}" TextColor="Black" FontSize="Small"/>
+                                    <Label Text="{Binding Desc}" FontSize="Small" TextColor="Black"/>
+                                    <Label Text="{Binding Id}" FontSize="Small" TextColor="Black"/>
+                                    <Label Text="{Binding Lat}" FontSize="Small" TextColor="Black"/>
+                                    <Label Text="{Binding Lng}" FontSize="Small" TextColor="Black"/>
+                                    <Label Text="{Binding ImageName}" FontSize="Small" TextColor="Black"/>
+                                    <Label Text="{Binding ImagePath}" FontSize="Small" TextColor="Black"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>-->
+
+
+        <StackLayout>
+            <ListView ItemsSource="{Binding Animals}" BackgroundColor="LightYellow" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal"  Padding="20,20,20,20">
+                                <Image Source="{Binding ImagePath}" ScaleX="2" ScaleY="2" HorizontalOptions="StartAndExpand"></Image>
+                                <Label Text="{Binding Name}" TextColor="Black" FontSize="Large" HorizontalTextAlignment="End" LineBreakMode="WordWrap"></Label>
+                                <Label Text="{Binding Desc}" TextColor="Black" FontSize="Small" HorizontalTextAlignment="End" LineBreakMode="WordWrap"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
+            
+        
+        <!--<ListView ItemsSource="{Binding Animals}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="4*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+                                <Label Text="{Binding Name}" TextColor="Blue" Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="{Binding Desc}" TextColor="Black"  Grid.Row="1" Grid.Column="1"/>
+                            </Grid>
+                        </ViewCell.View>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete Expense"
+                          IsDestructive="true"
+                          Command="{Binding Source={x:Reference mainPage}, Path=ViewModel.DeleteExpenseCommand}"
+                          CommandParameter="{Binding .}"
+                          />
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+        
     </ContentPage.Content>
 </ContentPage>
