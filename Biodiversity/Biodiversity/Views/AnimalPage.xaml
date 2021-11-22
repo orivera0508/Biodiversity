@@ -48,7 +48,7 @@
         </Grid>-->
 
 
-        <StackLayout>
+        <StackLayout x:Name="StackLayout">
             <ListView ItemsSource="{Binding Animals}" BackgroundColor="LightYellow" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
