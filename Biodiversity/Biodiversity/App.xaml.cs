@@ -14,7 +14,7 @@ namespace Biodiversity
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new HomePage());
         }
 
         public App(string databaseLocation)

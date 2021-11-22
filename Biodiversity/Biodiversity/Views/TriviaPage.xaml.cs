@@ -16,5 +16,10 @@ namespace Biodiversity.Views
         {
             InitializeComponent();
         }
+
+        async void OnButtonClicked(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new QuizPage());
+        }
     }
 }
