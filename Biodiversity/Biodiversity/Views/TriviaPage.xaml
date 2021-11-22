@@ -8,6 +8,12 @@
             <Label Text="Welcome to the Trivia Page!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Take Quiz!"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked" />
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
