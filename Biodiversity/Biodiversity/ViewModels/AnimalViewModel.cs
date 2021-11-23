@@ -41,7 +41,7 @@ namespace Biodiversity.ViewModels
         public AnimalViewModel()
         {
             services = new DBFirebase();
-            Animals = services.GetAnimal();
+            Animals = services.GetAnimalAsync().Result;
             AddAnimalCommand = new Command(async () => await addAnimalAsync(Id, Name, Lat, Lng, Desc, ImageName, ImagePath));
         }
 

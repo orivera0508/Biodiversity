@@ -28,6 +28,17 @@ namespace Biodiversity.Services
             return animalData;
         }
 
+        public async Task<ObservableCollection<Animal>> GetAnimalAsync()
+        {
+            var task = Task.Run(() => GetAnimal());
+
+            return await task;
+
+            //ObservableCollection<Animal> result = await task;
+
+            //return result;
+        }
+
         public async Task AddAnimal(int id, string name, float lat, float lng, string desc, string imageName, string imagePath)
         {
             Animal a = new Animal() { Id = id, Name = name, Lat = lat, Lng = lng, Desc = desc, ImageName = imageName, ImagePath = imagePath };
