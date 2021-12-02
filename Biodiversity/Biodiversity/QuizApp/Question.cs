@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Biodiversity.Views
 {
-     public class Preguntas
+     public class Question
     {
         private int id;
         private string Quest;
@@ -15,15 +15,15 @@ namespace Biodiversity.Views
         private string correcto;
 
         public int Id { get { return id; } set { id = value; } }
-        public string Quest_ { get { return Quest; } set { Quest = value; } }
+        public string quest_ { get { return Quest; } set { Quest = value; } }
         public string resp1_{ get { return resp1; } set { resp1 = value; } }
         public string resp2_ { get { return resp2; } set { resp2 = value; } }
         public string resp3_ { get { return resp3; } set { resp3 = value; } }
         public string resp4_ { get { return resp4; } set { resp4 = value; } }
-        public string Correcto { get { return correcto; } set { correcto = value; } }
+        public string correct { get { return correcto; } set { correcto = value; } }
 
-        public Preguntas() { }
+        public Question() { }
 
-        public Preguntas setting_pregunta(Preguntas quest) { return quest; }
+        public Question setting_pregunta(Question quest) { return quest; }
     }
 }

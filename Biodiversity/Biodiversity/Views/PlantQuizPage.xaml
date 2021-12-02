@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Biodiversity.Views.QuizPage">
+             x:Class="Biodiversity.Views.PlantQuizPage">
 
     <Grid BackgroundColor="CadetBlue">
 
@@ -11,7 +11,7 @@
                       Margin="30,30" 
                       VerticalOptions="StartAndExpand">
 
-                <Label Text="Geometry Quiz!" 
+                <Label Text="Biodiversity Trivia!" 
                        TextColor="White"
                        HorizontalOptions="Center"
                        VerticalOptions="CenterAndExpand" 
@@ -19,7 +19,7 @@
                        FontFamily="Lobster-Regular"
                        FontSize="20"/>
 
-                <Label Text="Seleccione la respuesta correcta"
+                <Label Text="Choose the correct response"
                        TextColor="White"
                        HorizontalOptions="Center"
                        VerticalOptions="CenterAndExpand"
@@ -27,7 +27,7 @@
                        FontSize="14"/>
 
                 <Label x:Name="lblpreguntita" 
-                       Text="1. En matemáticas, son un conjunto de puntos en el espacio." 
+                       Text="1. Which one of these plants is poisonous?" 
                        TextColor="White"
                        HorizontalOptions="Center"
                        VerticalOptions="CenterAndExpand"
@@ -36,7 +36,7 @@
             </StackLayout>
 
             <StackLayout Margin="20, 150,20,20">
-                <Button Text="Figuras Geométricas" x:Name="btnresp1"
+                <Button Text="Rain Lily" x:Name="btnresp1"
                     TextColor="White"
                     BackgroundColor="Gray"
                     BorderColor="Aquamarine"
@@ -44,7 +44,7 @@
                     CornerRadius="10"
                     Clicked="Button1_Clicked" ></Button>
 
-                <Button Text="Axioma" x:Name="btnresp2"
+                <Button Text="Maga Tree" x:Name="btnresp2"
                     TextColor="White"
                     BackgroundColor="Gray"
                     BorderColor="Aquamarine"
@@ -52,7 +52,7 @@
                     CornerRadius="10"
                     Clicked="Button2_Clicked" ></Button>
 
-                <Button Text="Partes Homólogas" x:Name="btnresp3"
+                <Button Text="Frangipani" x:Name="btnresp3"
                     TextColor="White"
                     BackgroundColor="Gray"
                     BorderColor="Aquamarine"
@@ -60,7 +60,7 @@
                     CornerRadius="10"
                     Clicked="Button3_Clicked" ></Button>
 
-                <Button Text="Lugares Geométricos" x:Name="btnresp4"
+                <Button Text="Sintenis Holly" x:Name="btnresp4"
                     TextColor="White"
                     BackgroundColor="Gray"
                     BorderColor="Aquamarine"
@@ -70,26 +70,18 @@
                 
                 <StackLayout>
                     <Grid Margin="0,30,0,0">
-                        <Button Text="Mostrar Puntuación Final" x:Name="btnPuntuacion"
+                        <Button Text="Show Score" x:Name="btnPuntuacion"
                     TextColor="White"
                     BackgroundColor="Gray"
                     BorderColor="Aquamarine"
                     BorderWidth="5"
                     CornerRadius="60"
-                    Clicked="MostrarAlerta"
+                    Clicked="showAlert"
                     IsVisible="False">
                         </Button>
                     </Grid>
                 </StackLayout>
-                
-                <Label Text="Quiz de 4 preguntas" 
-                       x:Name="lblpuntuacion"
-                       TextColor="White"
-                       HorizontalOptions="EndAndExpand"
-                       VerticalOptions="EndAndExpand" 
-                       FontAttributes="Bold"
-                       FontFamily="Lobster-Regular"
-                       FontSize="14"/>
+               
 
             </StackLayout>
            
