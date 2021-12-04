@@ -68,19 +68,6 @@
                     CornerRadius="10"
                     Clicked="Button4_Clicked" ></Button>
                 
-                <StackLayout>
-                    <Grid Margin="0,30,0,0">
-                        <Button Text="Show Score" x:Name="btnPuntuacion"
-                    TextColor="White"
-                    BackgroundColor="Gray"
-                    BorderColor="Aquamarine"
-                    BorderWidth="5"
-                    CornerRadius="60"
-                    Clicked="showAlert"
-                    IsVisible="False">
-                        </Button>
-                    </Grid>
-                </StackLayout>
                
 
             </StackLayout>

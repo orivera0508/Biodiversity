@@ -81,7 +81,7 @@ namespace Biodiversity.Views
         private string setQuestion(int ID)
         {
             Question list = listapreguntas.Where(a => a.Id == ID).SingleOrDefault();
-            try
+            if (point != listapreguntas.Count()+1)
             {
                 lblpreguntita.Text = list.quest_;
                 btnresp1.Text = list.resp1_;
@@ -89,12 +89,12 @@ namespace Biodiversity.Views
                 btnresp3.Text = list.resp3_;
                 btnresp4.Text = list.resp4_;
                 correctResponse = list.correct;
-                btnPuntuacion.IsVisible = true;
 
             }
-            catch (Exception)
+            else
             {
-
+                DisplayAlert("Game Over!", "Your final score is: " + score + " / " + listapreguntas.Count(), "OK");
+                Shell.Current.GoToAsync($"//{nameof(TriviaPage)}");
             }
             
             return correctResponse;
@@ -138,10 +138,6 @@ namespace Biodiversity.Views
             }
             point++;
             setQuestion(point);
-        }
-        async void showAlert(object sender, EventArgs e)
-        {
-            await DisplayAlert("Score", "Your final score is: " + score + " / "+ point, "OK");
         }
     }
 }
