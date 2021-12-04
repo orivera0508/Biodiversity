@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:viewmodels="clr-namespace:Biodiversity.ViewModels" x:DataType="viewmodels:AnimalViewModel"
              x:Class="Biodiversity.Views.PlantPage"
              Title="Plant">
 
@@ -18,11 +20,46 @@
                     Priority="0" />
     </ContentPage.ToolbarItems>
 
-    <ContentPage.Content>
-        <StackLayout x:Name="StackLayout">
-            <Label Text="Welcome to Plant Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <xct:TabView>
+        <!--Catalog Page-->
+        <xct:TabViewItem Text="Catalog" TextColorSelected="Green">
+            <xct:TabViewItem.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <ScrollView Grid.Row="1">
+                        <StackLayout x:Name="StackLayout">
+                            <ListView ItemsSource="{Binding Animals}" BackgroundColor="Blue" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal"  Padding="20,20,20,20">
+                                                <Image Source="{Binding ImagePath}" ScaleX="2" ScaleY="2" HorizontalOptions="StartAndExpand"></Image>
+                                                <Label Text="{Binding Name}" TextColor="Black" FontSize="Large" HorizontalTextAlignment="End" LineBreakMode="WordWrap"></Label>
+                                                <Label Text="{Binding Desc}" TextColor="Black" FontSize="Small" HorizontalTextAlignment="End" LineBreakMode="WordWrap"></Label>
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                    </ScrollView>
+                </Grid>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+
+        <!--Distribution Map Page-->
+        <xct:TabViewItem Text="Distribution Map" TextColorSelected="Green">
+            <xct:TabViewItem.Content>
+                <StackLayout>
+                    <Label Text="Welcome to the Distribution Map!"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+    </xct:TabView>
 </ContentPage>
