@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-<<<<<<< HEAD
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-=======
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Biodiversity.ViewModels" x:DataType="viewmodels:AnimalViewModel"
->>>>>>> 0932ac351a18887d2d3c0ac2e4d35d64ae2b7470
+             xmlns:viewmodels="clr-namespace:Biodiversity.ViewModels" x:DataType="viewmodels:AnimalViewModel"
              x:Class="Biodiversity.Views.AnimalPage"
              Title="Animal">
 
@@ -22,7 +19,6 @@
                     Order="Primary"
                     Priority="0" />
     </ContentPage.ToolbarItems>
-<<<<<<< HEAD
 
     <xct:TabView>
         <!--Catalog Page-->
@@ -35,7 +31,7 @@
                     </Grid.RowDefinitions>
 
                     <ScrollView Grid.Row="1">
-                        <StackLayout x:Name="StackLayout" Orientation="Vertical" Padding="30,24,30,24" Spacing="10" BackgroundColor="#4caf50">
+                        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10" BackgroundColor="#4caf50">
                             <Label Text="Welcome to the Animal Page!"
                                     VerticalOptions="CenterAndExpand" 
                                     HorizontalOptions="CenterAndExpand" />
@@ -57,9 +53,8 @@
         </xct:TabViewItem>
     </xct:TabView>
 
-=======
     <ContentPage.Content>
-        
+
         <!--<Grid Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
@@ -104,8 +99,8 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-            
-        
+
+
         <!--<ListView ItemsSource="{Binding Animals}">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -137,7 +132,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>-->
-        
+
     </ContentPage.Content>
->>>>>>> 0932ac351a18887d2d3c0ac2e4d35d64ae2b7470
 </ContentPage>

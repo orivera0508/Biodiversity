@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\QuizPage.xaml">
+    <EmbeddedResource Update="Views\PlantQuizPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\AnimalPage.xaml">
@@ -32,6 +32,12 @@
   <ItemGroup>
     <Compile Update="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AnimalQuizPage.xaml.cs">
+      <DependentUpon>AnimalQuizPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PlantQuizPage.xaml.cs">
+      <DependentUpon>PlantQuizPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 

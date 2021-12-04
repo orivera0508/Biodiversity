@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biodiversity.Views.PlantQuizPage">
+
+    <Grid BackgroundColor="CadetBlue">
+
+        <Grid Grid.Row="0" Margin="0,10,0,0">
+            <StackLayout  Orientation="Vertical" 
+                      HorizontalOptions="StartAndExpand" 
+                      Margin="30,30" 
+                      VerticalOptions="StartAndExpand">
+
+                <Label Text="Biodiversity Trivia!" 
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand" 
+                       FontAttributes="Bold"
+                       FontFamily="Lobster-Regular"
+                       FontSize="20"/>
+
+                <Label Text="Choose the correct response"
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"
+                       FontAttributes="Italic"
+                       FontSize="14"/>
+
+                <Label x:Name="lblpreguntita" 
+                       Text="1. Which one of these plants is poisonous?" 
+                       TextColor="White"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"
+                       FontSize="12"/>
+
+            </StackLayout>
+
+            <StackLayout Margin="20, 150,20,20">
+                <Button Text="Rain Lily" x:Name="btnresp1"
+                    TextColor="White"
+                    BackgroundColor="Gray"
+                    BorderColor="Aquamarine"
+                    BorderWidth="3"
+                    CornerRadius="10"
+                    Clicked="Button1_Clicked" ></Button>
+
+                <Button Text="Maga Tree" x:Name="btnresp2"
+                    TextColor="White"
+                    BackgroundColor="Gray"
+                    BorderColor="Aquamarine"
+                    BorderWidth="3"
+                    CornerRadius="10"
+                    Clicked="Button2_Clicked" ></Button>
+
+                <Button Text="Frangipani" x:Name="btnresp3"
+                    TextColor="White"
+                    BackgroundColor="Gray"
+                    BorderColor="Aquamarine"
+                    BorderWidth="3"
+                    CornerRadius="10"
+                    Clicked="Button3_Clicked" ></Button>
+
+                <Button Text="Sintenis Holly" x:Name="btnresp4"
+                    TextColor="White"
+                    BackgroundColor="Gray"
+                    BorderColor="Aquamarine"
+                    BorderWidth="3"
+                    CornerRadius="10"
+                    Clicked="Button4_Clicked" ></Button>
+               
+               
+
+            </StackLayout>
+           
+        </Grid>
+        
+       
+    </Grid>
+
+</ContentPage>
