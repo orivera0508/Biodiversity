@@ -19,7 +19,7 @@ namespace Biodiversity.Views
         void OnAnimalClicked(object sender, EventArgs e)
         {
             ToolbarItem item = (ToolbarItem)sender;
-            Navigation.PushAsync(new AnimalPage());
+            Shell.Current.GoToAsync($"//{nameof(AnimalPage)}"); 
         }
         void OnSearchClicked(object sender, EventArgs e)
         {
