@@ -9,9 +9,9 @@ namespace Biodiversity.Views
        protected Question QuestionQuiz;
        public Question gettingQuestion() { return QuestionQuiz; }
 
-       public void CreandoInstancia() { QuestionQuiz = new Question(); }
+       public void createInstance() { QuestionQuiz = new Question(); }
 
-        public abstract void Building(Question pregunta);
+       public abstract void Building(Question pregunta);
 
     }
 }

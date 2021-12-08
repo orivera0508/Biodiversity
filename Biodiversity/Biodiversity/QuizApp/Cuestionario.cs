@@ -8,7 +8,7 @@ namespace Biodiversity.Views
     {
         public override void Building(Question p)
         {
-            QuestionQuiz.setting_pregunta(p);  
+            QuestionQuiz.setupQuestion(p);  
         }
     }
 }

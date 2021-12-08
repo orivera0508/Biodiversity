@@ -71,7 +71,7 @@ namespace Biodiversity.Views
                 correct = "Fruits"
             }
         };
-        int point = 1, score = 0;
+        int point = 0, score = 0;
         string correctResponse;
         protected void OnNavigatedTo(NavigationEventArgs e)
         {
