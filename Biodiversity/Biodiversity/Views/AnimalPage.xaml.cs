@@ -28,7 +28,7 @@ namespace Biodiversity.Views
         {
             searchButton.IsEnabled = false;
             SearchBar searchBar = new SearchBar { Placeholder = "Search animals..." };
-            //StackLayout.Children.Insert(0, searchBar);
+            StackLayout.Children.Insert(0, searchBar);
         }
     }
 }

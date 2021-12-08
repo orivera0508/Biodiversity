@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<<<<<<< HEAD
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+=======
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Biodiversity.ViewModels" x:DataType="viewmodels:AnimalViewModel"
+>>>>>>> 0932ac351a18887d2d3c0ac2e4d35d64ae2b7470
              x:Class="Biodiversity.Views.AnimalPage"
              Title="Animal">
 
@@ -17,12 +22,12 @@
                     Order="Primary"
                     Priority="0" />
     </ContentPage.ToolbarItems>
-
     <ContentPage.Content>
 
 
-        
-            <ListView ItemsSource="{Binding Animals}" VerticalOptions="FillAndExpand">
+
+        <StackLayout>
+            <ListView ItemsSource="{Binding Animals}" BackgroundColor="LightYellow" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -90,4 +95,5 @@
         </StackLayout>-->
         
     </ContentPage.Content>
+>>>>>>> 0932ac351a18887d2d3c0ac2e4d35d64ae2b7470
 </ContentPage>
