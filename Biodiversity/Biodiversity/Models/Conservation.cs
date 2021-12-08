@@ -11,5 +11,7 @@ namespace Biodiversity.Models
         public string Desc { get; set; }
         public string Link { get; set; }
         public string ImagePath { get; set; }
+
+        public Conservation() { }
     }
 }

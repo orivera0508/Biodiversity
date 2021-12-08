@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Biodiversity.Views.ConservationPage"
+             x:Class="Biodiversity.Views.ConservationPage" 
              Title="Conservation">
 
     <ContentPage.ToolbarItems>
@@ -13,10 +13,18 @@
                     Priority="0" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout x:Name="StackLayout">
-            <Label Text="Welcome to Conservartion Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView BackgroundColor="Transparent"
+                  ItemsSource="{Binding conservationList}">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Name}"
+                               Detail="{Binding Desc}"
+                               ImageSource="{Binding ImagePath}">
+
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>
