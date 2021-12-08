@@ -1,11 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-<<<<<<< HEAD
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-=======
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Biodiversity.ViewModels" x:DataType="viewmodels:AnimalViewModel"
->>>>>>> 0932ac351a18887d2d3c0ac2e4d35d64ae2b7470
+             xmlns:viewmodels="clr-namespace:Biodiversity.ViewModels" x:DataType="viewmodels:AnimalViewModel"
              x:Class="Biodiversity.Views.AnimalPage"
              Title="Animal">
 
@@ -22,78 +19,47 @@
                     Order="Primary"
                     Priority="0" />
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
 
+    <xct:TabView>
+        <!--Catalog Page-->
+        <xct:TabViewItem Text="Catalog" TextColorSelected="Green">
+            <xct:TabViewItem.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
 
+                    <ScrollView Grid.Row="1">
+                        <StackLayout x:Name="StackLayout">
+                            <ListView ItemsSource="{Binding Animals}" BackgroundColor="Green" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal"  Padding="20,20,20,20">
+                                                <Image Source="{Binding ImagePath}" ScaleX="2" ScaleY="2" HorizontalOptions="StartAndExpand"></Image>
+                                                <Label Text="{Binding Name}" TextColor="Black" FontSize="Large" HorizontalTextAlignment="End" LineBreakMode="WordWrap"></Label>
+                                                <Label Text="{Binding Desc}" TextColor="Black" FontSize="Small" HorizontalTextAlignment="End" LineBreakMode="WordWrap"></Label>
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                    </ScrollView>
+                </Grid>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
 
-        <StackLayout>
-            <ListView ItemsSource="{Binding Animals}" BackgroundColor="LightYellow" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.View>
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="4*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <Image Source="{Binding ImagePath}" 
-                                           Grid.Row="0" 
-                                           Grid.Column="0"
-                                           Grid.RowSpan="2" 
-                                           ScaleX="3" 
-                                           ScaleY="3"/>
-                                    <Label Text="{Binding Name}" 
-                                           TextColor="Black" 
-                                           Grid.Row="0" 
-                                           Grid.Column="2"
-                                           Grid.ColumnSpan="5"/>
-                                    <Label Text="{Binding Desc}" 
-                                           TextColor="DarkCyan"  
-                                           Grid.Row="1" 
-                                           Grid.Column="2"
-                                           Grid.ColumnSpan="5"/>
-                                </Grid>
-                            </ViewCell.View>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        
-
-        <!--<StackLayout>
-            <ListView  x:Name="listView" ItemsSource="{Binding Animals}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout BackgroundColor="#eee"
-                        Orientation="Vertical">
-                                <StackLayout Orientation="Horizontal">
-                                    <Image Source="{Binding ImagePath}"
-                                           Grid.Row="0" 
-                                           Grid.Column="0"
-                                           Grid.RowSpan="2" 
-                                           ScaleX="2" 
-                                           ScaleY="2" />
-                                    <Label Text="{Binding Name}"
-                                TextColor="#f35e20" />
-                                    <Label Text="{Binding Desc}"
-                                HorizontalOptions="EndAndExpand"
-                                TextColor="#503026" />
-                                </StackLayout>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>-->
-        
-    </ContentPage.Content>
->>>>>>> 0932ac351a18887d2d3c0ac2e4d35d64ae2b7470
+        <!--Distribution Map Page-->
+        <xct:TabViewItem Text="Distribution Map" TextColorSelected="Green">
+            <xct:TabViewItem.Content>
+                <StackLayout>
+                    <Label Text="Welcome to the Distribution Map!"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+            </xct:TabViewItem.Content>
+        </xct:TabViewItem>
+    </xct:TabView>
 </ContentPage>

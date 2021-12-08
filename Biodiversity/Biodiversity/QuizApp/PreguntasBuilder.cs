@@ -6,12 +6,12 @@ namespace Biodiversity.Views
 {
     public abstract class PreguntasBuilder
     {
-       protected Preguntas QuestionQuiz;
-       public Preguntas gettingQuestion() { return QuestionQuiz; }
+       protected Question QuestionQuiz;
+       public Question gettingQuestion() { return QuestionQuiz; }
 
-       public void CreandoInstancia() { QuestionQuiz = new Preguntas(); }
+       public void createInstance() { QuestionQuiz = new Question(); }
 
-        public abstract void Building(Preguntas pregunta);
+       public abstract void Building(Question pregunta);
 
     }
 }

@@ -9,10 +9,15 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <Button Text="Take Quiz!"
+            <Button Text="Take Plant Quiz!"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
                 Clicked="OnButtonClicked" />
+            
+            <Button Text="Take Animal Quiz!"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnButton2Clicked" />
             
         </StackLayout>
     </ContentPage.Content>

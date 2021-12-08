@@ -6,9 +6,9 @@ namespace Biodiversity.Views
 {
     public class Cuestionario : PreguntasBuilder
     {
-        public override void Building(Preguntas p)
+        public override void Building(Question p)
         {
-            QuestionQuiz.setting_pregunta(p);  
+            QuestionQuiz.setupQuestion(p);  
         }
     }
 }

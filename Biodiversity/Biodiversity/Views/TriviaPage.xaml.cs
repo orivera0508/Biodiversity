@@ -19,7 +19,12 @@ namespace Biodiversity.Views
 
         async void OnButtonClicked(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new QuizPage());
+            await Navigation.PushAsync(new PlantQuizPage());
+        }
+
+        async void OnButton2Clicked(object sender, EventArgs args)
+        {
+            await Navigation.PushAsync(new AnimalQuizPage());
         }
     }
 }

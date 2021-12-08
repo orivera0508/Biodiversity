@@ -10,11 +10,11 @@ namespace Biodiversity.Views
 
         public void SetPreguntasBuilder(PreguntasBuilder question) { preguntas = question; }
 
-        public Preguntas Gettingpreguntas() { return preguntas.gettingQuestion(); }
+        public Question Gettingpreguntas() { return preguntas.gettingQuestion(); }
 
         public void BuildingQuestions()
         {
-            preguntas.CreandoInstancia();
+            preguntas.createInstance();
 
         }
 

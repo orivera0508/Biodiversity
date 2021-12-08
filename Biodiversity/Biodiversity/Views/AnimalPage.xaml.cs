@@ -21,7 +21,7 @@ namespace Biodiversity.Views
         void OnPlantClicked(object sender, EventArgs e)
         {
             ToolbarItem item = (ToolbarItem)sender;
-            Navigation.PushAsync(new PlantPage());
+            Shell.Current.GoToAsync($"//{nameof(PlantPage)}");
         }
 
         void OnSearchClicked(object sender, EventArgs e)

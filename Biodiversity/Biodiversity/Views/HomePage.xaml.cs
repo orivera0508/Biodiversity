@@ -14,13 +14,13 @@ namespace Biodiversity.Views
         void OnAnimalClicked(object sender, EventArgs e)
         {
             ToolbarItem item = (ToolbarItem)sender;
-            Navigation.PushAsync(new AnimalPage());
+            Shell.Current.GoToAsync($"//{nameof(AnimalPage)}");
         }
 
         void OnPlantClicked(object sender, EventArgs e)
         {
             ToolbarItem item = (ToolbarItem)sender;
-            Navigation.PushAsync(new PlantPage());
+            Shell.Current.GoToAsync($"//{nameof(PlantPage)}");
         }
     }
 }
