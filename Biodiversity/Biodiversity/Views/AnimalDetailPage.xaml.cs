@@ -17,8 +17,10 @@ namespace Biodiversity.Views
         {
             InitializeComponent();
             BindingContext = animalItem;
+            animalInstance = animalItem;
         }
-
+        public Animal animalInstance;
+        
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -26,8 +28,9 @@ namespace Biodiversity.Views
 
         void OnLocationClicked(object sender, EventArgs e)
         {
-            var location = new Location(80, 80);
-            Xamarin.Essentials.Map.OpenAsync(location);
+            var location = new Location(animalInstance.Lat, animalInstance.Lng);
+            var options = new MapLaunchOptions { Name = animalInstance.Name + " Sighting" };
+            Xamarin.Essentials.Map.OpenAsync(location,options);
         }
     }
 }

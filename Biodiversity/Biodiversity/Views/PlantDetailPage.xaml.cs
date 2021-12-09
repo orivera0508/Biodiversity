@@ -16,13 +16,16 @@ namespace Biodiversity.Views
         public PlantDetailPage(Plant plantItem)
         {
             InitializeComponent();
-            BindingContext = plantItem; 
+            BindingContext = plantItem;
+            plantInstance = plantItem;
         }
+        public Plant plantInstance;
 
         void OnLocationClicked(object sender, EventArgs e)
         {
-            var location = new Location(80, 80);
-            Xamarin.Essentials.Map.OpenAsync(location);
+            var location = new Location(plantInstance.Lat, plantInstance.Lng);
+            var options = new MapLaunchOptions { Name = plantInstance.Name + " Sighting" };
+            Xamarin.Essentials.Map.OpenAsync(location, options);
         }
     }
 }
