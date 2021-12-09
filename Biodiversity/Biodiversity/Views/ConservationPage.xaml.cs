@@ -93,7 +93,7 @@ namespace Biodiversity.Views
             {
                 return;
             }
-            Navigation.PushAsync(new ItemDetailPage(tappedPost));
+            //Navigation.PushAsync(new ItemDetailPage(tappedPost));
         }
     }
 }

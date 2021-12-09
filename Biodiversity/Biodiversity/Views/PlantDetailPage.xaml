@@ -11,6 +11,9 @@
                 <Label Text="{Binding Desc}" FontSize="Small"/>
                 <Label Text="Image:" FontSize="Medium" />
                 <Image Source="{Binding ImagePath}"/>
+                <Button Text="View Location"             
+                HorizontalOptions="Center"
+                Clicked="OnLocationClicked" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

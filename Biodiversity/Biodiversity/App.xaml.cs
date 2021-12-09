@@ -1,5 +1,4 @@
-﻿using Biodiversity.Services;
-using Biodiversity.Views;
+﻿using Biodiversity.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,18 +11,13 @@ namespace Biodiversity
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new NavigationPage(new HomePage());
         }
 
         public App(string databaseLocation)
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
-
             DatabaseLocation = databaseLocation;
         }
 
