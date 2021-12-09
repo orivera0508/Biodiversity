@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Biodiversity.Views.PlantDetailPage">
+    <ContentPage.Content>
+
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Name:" FontSize="Medium" />
+            <Label Text="{Binding Name}" FontSize="Small"/>
+            <Label Text="Description:" FontSize="Medium" />
+            <Label Text="{Binding Desc}" FontSize="Small"/>
+            <Label Text="Image:" FontSize="Medium" />
+            <Image Source="{Binding ImagePath}"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
