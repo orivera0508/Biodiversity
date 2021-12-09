@@ -16,7 +16,12 @@ namespace Biodiversity.Views
         public AnimalDetailPage(Animal animalItem)
         {
             InitializeComponent();
-            BindingContext = animalItem; 
+            BindingContext = animalItem;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
         }
     }
 }

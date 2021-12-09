@@ -42,9 +42,9 @@ namespace Biodiversity.Views
             new Animal
             {
                 Id = 2,
-                Desc = "The Puerto Rican Parrot is a critically endangered endemic species of Puerto Rico, and is the only native parrot in the United States. At one point the parrot was abundant, but through the years, deforestation, predation, diseases and poaching caused the population to crash. Today, the parrot’s population has more than 500 birds that are distributed among state and federal facilities and three wild locations: Maricao Forest, El Yunque National Forest and Rio Abajo Forest.",
-                Name = "Puertorican Parrot",
-                ImagePath = "https://www.cienciapr.org/sites/cienciapr.org/files/field/image/cotorra_courtesy-omar_monsegur_from_usfws_endangered_species.jpg"
+                Desc = "A tiny, brilliant-green resident of wooded habitats. There are no similar species within its range. Typically perches at low to middle levels in the forest and sallies forth to snag insects from the undersides of leaves. When not actively pursuing a meal, sits rather motionless. Most active, and thus most easily seen, when the sun comes out following rain. Most often first detected by its voice: a loud buzzy “zhip, zhip.”",
+                Name = "Puerto Rican Tody",
+                ImagePath = "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/289051751/"
             },
 
             new Animal
@@ -94,20 +94,13 @@ namespace Biodiversity.Views
                Name = "Puerto Rico Upland Gecko",
                ImagePath = "https://www.fws.gov/southeast/images/hero/small/monito-gecko-macro.jpg"
             },
+
             new Animal
             {
                Id = 9,
                Desc = "The body of the Tailless whip-scorpion is is flat. It has ten legs, and its first legs are very long, thin and whip-like. This Amblyplygid’s pedipalps (pincer-bearing front arms adapted for sensory and predatory use) are spiny and powerful. Whip-scorpions found in the El Yunque National Forest can be quite large (19 to 25 inches/48 to 63 centimeters, including legs) when compared to those found in other tropical areas, possibly because there are no large mammal predators on the island. Adult females are larger than males.",
                Name = "Tailless Whip-Scorpion",
                ImagePath = "https://alfredocolon.zenfolio.com/img/s/v-10/p1959880747-3.jpg"
-            },
-
-            new Animal
-            {
-               Id = 10,
-               Desc = "The Mountain Mullet is one of the native fishes that occur in steep mountain streams within the forest. It is locally fished for sport and food. This fresh water fish is an omnivore but prefers mollusks, small shrimps, spiders and other insects, often feeding near the water surface. The fish can be found on the upper reaches of streams and rivers in the island mountains sections.",
-               Name = "Mountain Mullet",
-               ImagePath = "https://biogeodb.stri.si.edu/sftep/resources/img/images/species/785_5329.jpg"
             }
 
         };

@@ -70,8 +70,8 @@
                                         <ViewCell>
                                             <ViewCell.View>
                                                 <StackLayout Orientation="Horizontal"  Padding="20,20,20,20">
-                                                    <Image Source="{Binding ImagePath}" ScaleX="2" ScaleY="2" HorizontalOptions="StartAndExpand"></Image>
-                                                    <Label Text="{Binding Name}" TextColor="Black" FontSize="Large" HorizontalTextAlignment="End" LineBreakMode="WordWrap"></Label>
+                                                    <Image Source="{Binding ImagePath}" ScaleX="2" ScaleY="2" HorizontalOptions="StartAndExpand" Aspect="AspectFill" Margin="10,10,10,10" WidthRequest="80" />
+                                                    <Label Text="{Binding Name}" TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" WidthRequest="200" HeightRequest="50"></Label>
                                                 </StackLayout>
                                             </ViewCell.View>
                                         </ViewCell>
