@@ -50,57 +50,56 @@ namespace Biodiversity.Views
             new Animal
             {
                Id = 3,
-               Desc = "The Puerto Rican Screech-Owl is the only small owl found in Puerto Rico measuring only 9 to 10 inches. This owl eats mainly insects and small mammals. This bird is completely nocturnal and is seldom seen during the day. It was one local folklore that eating the freshly cooked heart of this bird would cure asthma. They breed from April to June nesting in hollow trees and cliff crevices. The female lays 2 to 3 white eggs and is fed by her mate while she incubates them. The sound it makes can be heard in the early morning and early evening hours. ",
-               Name = "Puerto Rican Screech Owl",
-               ImagePath = "https://socialehispanobeata.files.wordpress.com/2013/10/121725752-ezvw5jy3.jpg"
+               Desc = "The Puerto Rican coqui (pronounced ko-kee) is a small arboreal frog that’s brown, yellow, or green in color. Its scientific genus name—Eleutherodactylus—means “free toes” because, unlike many frogs, the coqui doesn’t have webbed feet. These amphibians have special disks, or toe pads, on their feet that allow them to climb up vertical structures and cling to trees and leaves. Puerto Rican coquis are one to two inches (2.5 to 5 centimeters) long and weigh two to four ounces (57 to 113 grams). They are one of the largest frog species found in Puerto Rico.",
+               Name = "Common Coqui",
+               ImagePath = "https://lh6.ggpht.com/G_1QtdNsvnDUPiDu2QEl9nJEPsYched9VaWt_Y0Kr3qDMSZBWCHoVERNxFQwRZofcwImsuKixZy3g6NONSLR=s580"
             },
 
             new Animal
             {
                Id = 4,
-               Desc = "The Puerto Rican Tody is a common and widespread endemic to Puerto Rico from the coast to the Mountains. Its habitat are forested areas, including damp forests of hills and mountains, shade coffee plantations and dense thickets in the arid lowlands of the south coast. They are difficult to see from afar because they are diminutive about 11cm in size, but you can hear the sound which is a loud nasal beep or bee-beep.",
-               Name = "Puertorican Tody",    
-               ImagePath = "https://i.pinimg.com/originals/05/6e/95/056e9563e40ed9ed6105533fa1f5d0cd.jpg"
+               Desc = "Is the only giant Anolis in mainland Puerto Rico, the other giant form A. roosevelti from Culebra Island is now probably extinct. In the most common phase the body, tail, and extremities are emerald green or yellowish green. The head is sometimes suffused with blue and there are some purple scales on the snout and in back of the orbit. The less common phase is gray or greenish gray with dark brown mottles (which may form bars) and dots. In both phases the eye is surrounded by yellow, the dewlap is yellow, and the tongue and palate light orange-yellow.",
+               Name = "Giant Anole",
+               ImagePath = "https://lh6.ggpht.com/NeaKe8JXoJY2eIm8ZRO15MDVGr2rZkyHDc-yl42azupIYHnGdA0y_6KtDlo5jVpJOYtXaGr_bi04T_nSARw9=s580"
             },
 
             new Animal
             {
                Id = 5,
-               Desc = "The Small Indian Mongoose was first brought to Puerto Rico from the Malay Peninsula in 1877 in an attempt to control the Black Rat infestation of the sugar cane plantations. The mongoose is a terrestrial animal, they are very agile, and can climb skillfully. They feed on insects, frogs, snakes, birds and other small animals as well as fruits. They shelter in hollow logs or trees, holes in the ground or rock crevices. Mongoose can be found throughout the forest. Mongooses can be infected with rabies please don’t approach them at any time.",
-               Name = "Small Indian Mongoose",
-               ImagePath = "https://rajajinationalpark.org/wp-content/uploads/small-indian-mongoose.jpg"
-            },
-
-            new Animal
-            {
-               Id = 6,
-               Desc = "The Brown Flower Bat is a fruit, flower, pollen and nectar-eating bat that will occasionally eat insects. It is a member of an endemic group of American leaf-nosed bats that has lived in the Caribbean for almost 15 million years. The adult males gather together in a display arena where they use visual, olfactory, and vocal signals to attract females for mating. ",
-               Name = "Brown Flower Bat",
-               ImagePath = "https://inaturalist-open-data.s3.amazonaws.com/photos/1517119/medium.jpg"
-            },
-
-            new Animal
-            {
-               Id = 7,
-               Desc = "The Puerto Rican Boa belongs to the Boidae family, one of the three families of snakes that exists on the island. It can be distinguished from all other native snakes by a unique head shape and disorderly scale arrangement. The Boa typically grows to 6 or 7 feet, although 12-foot-long specimens have been reported. Its color varies from tan to dark brown. These are non-poisonous and feed on rats, mice and bats. They can be seen on the ground or in trees. ",
+               Desc = "At seven feet long, Puerto Rican boas—also known as yellow tree boas—are the largest snakes on the island of Puerto Rico. They’re relatively slender reptiles with a dull brown or gray coloration and dark blotches along their bodies. These snakes are not venomous. Instead of using venom to immobilize prey, the boas are constrictors that use their bodies to wrap around prey until it suffocates.",
                Name = "Puerto Rican Boa",
                ImagePath = "https://www.nwf.org/-/media/NEW-WEBSITE/Shared-Folder/Wildlife/Reptiles/reptile_puerto-rican-boa_FWSGOV_600x300.ashx"
             },
 
             new Animal
             {
-               Id = 8,
-               Desc = "The Upland is one of the species of rassor ushanoles in Puerto Rico. The lizard can be found around the island and varies in color according to location. The primary body color is black; while in other areas of the island it is yellow. They feed on beetles, spiders, ticks, ants and small snails. A very territorial species, males will vigorously defend their small territories against intruders of the same species. They can be found on ferns, bushes and trunks of small trees.",
-               Name = "Upland Grass Anole",
-               ImagePath = "https://inaturalist-open-data.s3.amazonaws.com/photos/914/medium.jpg"
+               Id = 6,
+               Desc = "The Puerto Rican crested toad is the only toad species native to Puerto Rico. Named for the bony crests above its large, golden eyes, this toad is also identifiable by an upturned snout and bumpy skin that feels like it’s covered in pebbles. Males are olive green with pads on their thumbs, and females have rougher, dull-brown skin and more prominent crests.",
+               Name = "Puerto Rican Crested Toad",
+               ImagePath = "https://assets.speakcdn.com//assets/2147/12_pr_crested_toad_-_margarita_woc_colburn.jpg"
+            },
+           
+            new Animal
+            {
+               Id = 7,
+               Desc = "Plump brown bird of shady understories in humid evergreen forest of tropical lowlands. Found singly or in pairs, perched quietly at low to middle levels. Often sits still for long periods and is easily overlooked. Note the stout bill, reddish eyes, streaky underparts, bushy white whiskers, and finely dappled whitish to buffy upperparts.",
+               Name = "White-whiskered Puffbird",
+               ImagePath = "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/165500721/"
             },
 
             new Animal
             {
+               Id = 8,
+               Desc = "The Upland Gecko is one of the larger-sized gecko species. It typically measures up to 5.7 inches (14.5 centimeters) snout to vent, and has a dark-brown upper body with darker-brown or black spots which are larger on the tail. The underbody is usually orange or reddish-pink with a gray throat that may have dark mottled areas.",
+               Name = "Puerto Rico Upland Gecko",
+               ImagePath = "https://www.fws.gov/southeast/images/hero/small/monito-gecko-macro.jpg"
+            },
+            new Animal
+            {
                Id = 9,
-               Desc = "The Common Coqui is a tiny frog native to the island. The common coqui gets its name from the unique nighttime calling sound (ko-kee) made by the male species. It is the most abundant frog species in Puerto Rico with densities estimated at 20,000 individuals per Hectare. Coqui is considered the unofficial “mascot” of the Island’s people because it is considered a very important symbol of Puerto Rico’s culture. It’s considered a habitat generalist, because it can be found almost anywhere on the island like mesic broad forests, mountains and in urban areas.",
-               Name = "Common Coqui",
-               ImagePath = "https://welcome.topuertorico.org/img/hp-coqui.jpg"
+               Desc = "The body of the Tailless whip-scorpion is is flat. It has ten legs, and its first legs are very long, thin and whip-like. This Amblyplygid’s pedipalps (pincer-bearing front arms adapted for sensory and predatory use) are spiny and powerful. Whip-scorpions found in the El Yunque National Forest can be quite large (19 to 25 inches/48 to 63 centimeters, including legs) when compared to those found in other tropical areas, possibly because there are no large mammal predators on the island. Adult females are larger than males.",
+               Name = "Tailless Whip-Scorpion",
+               ImagePath = "https://alfredocolon.zenfolio.com/img/s/v-10/p1959880747-3.jpg"
             },
 
             new Animal
@@ -109,9 +108,8 @@ namespace Biodiversity.Views
                Desc = "The Mountain Mullet is one of the native fishes that occur in steep mountain streams within the forest. It is locally fished for sport and food. This fresh water fish is an omnivore but prefers mollusks, small shrimps, spiders and other insects, often feeding near the water surface. The fish can be found on the upper reaches of streams and rivers in the island mountains sections.",
                Name = "Mountain Mullet",
                ImagePath = "https://biogeodb.stri.si.edu/sftep/resources/img/images/species/785_5329.jpg"
-            },
+            }
 
-          
         };
         ObservableCollection<Animal> listCon = new ObservableCollection<Animal>(animalList);
         public ObservableCollection<Animal> ListCon { get { return listCon; } }
