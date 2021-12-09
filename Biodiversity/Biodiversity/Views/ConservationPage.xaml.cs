@@ -85,5 +85,15 @@ namespace Biodiversity.Views
             SearchBar searchBar = new SearchBar { Placeholder = "Search items..." };
             //StackLayout.Children.Insert(0, searchBar);
         }
+
+        void ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            Conservation tappedPost = (Conservation)((ListView)sender).SelectedItem;
+            if (e.Item==null)
+            {
+                return;
+            }
+            Navigation.PushAsync(new ItemDetailPage(tappedPost));
+        }
     }
 }

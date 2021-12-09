@@ -13,10 +13,11 @@
                     Priority="0" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView x:Name="conservationListView">
+        <ListView x:Name="conservationListView"
+                  ItemTapped="ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" />
+                    <TextCell Text="{Binding Id}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
