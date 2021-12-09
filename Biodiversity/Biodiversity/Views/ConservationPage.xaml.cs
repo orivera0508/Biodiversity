@@ -7,22 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Biodiversity.Models;
+using System.Collections.ObjectModel;
 
 namespace Biodiversity.Views
 {
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class ConservationPage : ContentPage
     {
-        public ConservationPage()
-        {
-            InitializeComponent();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            
-        }
         public static List<Conservation> conservationList = new List<Conservation>
         {
             new Conservation
@@ -32,7 +25,7 @@ namespace Biodiversity.Views
                 Name = "Sample Name",
                 Link = "Sample Link",
                 ImagePath = "Sample Path"
-                
+
             },
 
             new Conservation
@@ -71,8 +64,21 @@ namespace Biodiversity.Views
                ImagePath = "Sample Path"
             }
         };
+        ObservableCollection<Conservation> listCon = new ObservableCollection<Conservation>(conservationList);
+        public ObservableCollection<Conservation> ListCon { get { return listCon; } }
+        public ConservationPage()
+        {
+            InitializeComponent();
+            conservationListView.ItemsSource = listCon;
+        }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            
+        }
         
+
         void OnSearchClicked(object sender, EventArgs e)
         {
             searchButton.IsEnabled = false;
