@@ -8,7 +8,7 @@
         <Label Text="Text:" FontSize="Medium" />
         <Label Text="{Binding Name}" FontSize="Small"/>
         <Label Text="Description:" FontSize="Medium" />
-        <Label Text="{Binding Id}" FontSize="Small"/>
+        <Label Text="{Binding Desc}" FontSize="Small"/>
     </StackLayout>
     
 </ContentPage>

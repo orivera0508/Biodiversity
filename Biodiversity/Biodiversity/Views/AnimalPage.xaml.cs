@@ -28,7 +28,7 @@ namespace Biodiversity.Views
         }
 
 
-            DBFirebase services = new DBFirebase();
+        DBFirebase services = new DBFirebase();
 
 
         public static List<Animal> animalList = new List<Animal>
@@ -36,46 +36,44 @@ namespace Biodiversity.Views
             new Animal
             {
                 Id = 1,
-                Desc = "Oh Oh Ah Ah",
-                Name = "Monke",
-                //Link = "Sample Link",
-                ImagePath = "https://i.pinimg.com/736x/32/5c/fc/325cfc67933c173e35003b30546a88da.jpg"
+                Desc = "The Puerto Rican Emerald is a tiny, iridescent green hummingbird that measures 3.5 to 4 inches (9 to 10 centimeters.) It can be easily identified by its small size, shiny green body, forked tail and smooth un-crested head.",
+                Name = "Puerto Rican Emerald",
+                ImagePath = @"https://cdn.download.ams.birds.cornell.edu/api/v1/asset/253019311/"
 
             },
 
-            new Animal
-            {
-                Id = 2,
-                Desc = "It's a literal lion.",
-                Name = "Lion",
-                //Link = "Sample Link",
-                ImagePath = "https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg"
-            },
+            //new Animal
+            //{
+            //    Id = 2,
+            //    Desc = "It's a literal lion.",
+            //    Name = "Lion",
+            //    //Link = "Sample Link",
+            //    ImagePath = "https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg"
+            //},
+
+            //new Animal
+            //{
+            //   Id = 3,
+            //   Desc = "It's a literal Rabbit",
+            //   Name = "Rabbit",
+            //   //Link = "Sample Link",
+            //   ImagePath = "https://www.calacademy.org/sites/default/files/styles/manual_crop_standard_960x540/public/assets/images/Education_Images/TYE_Images/breedingbunnies_blackbunnyattheoaklandzoo_1200x900_credit_ianmacd.jpg?itok=jDEgttlE&c=dda1181bf430fb6c549b7ee29da3be6e"
+            //},
+
+            //new Animal
+            //{
+            //   Id = 4,
+            //   Desc = "Sample Text",
+            //   Name = "Sample Name",
+            //   //Link = "Sample Link",
+            //   ImagePath = "Sample Path"
+            //},
 
             new Animal
             {
-               Id = 3,
-               Desc = "It's a literal Rabbit",
-               Name = "Rabbit",
-               //Link = "Sample Link",
-               ImagePath = "https://www.calacademy.org/sites/default/files/styles/manual_crop_standard_960x540/public/assets/images/Education_Images/TYE_Images/breedingbunnies_blackbunnyattheoaklandzoo_1200x900_credit_ianmacd.jpg?itok=jDEgttlE&c=dda1181bf430fb6c549b7ee29da3be6e"
-            },
-
-            new Animal
-            {
-               Id = 4,
+               Id = 2,
                Desc = "Sample Text",
                Name = "Sample Name",
-               //Link = "Sample Link",
-               ImagePath = "Sample Path"
-            },
-
-            new Animal
-            {
-               Id = 5,
-               Desc = "Sample Text",
-               Name = "Sample Name",
-               //Link = "Sample Link",
                ImagePath = "Sample Path"
             }
         };
@@ -101,6 +99,19 @@ namespace Biodiversity.Views
             searchButton.IsEnabled = false;
             SearchBar searchBar = new SearchBar { Placeholder = "Search animals..." };
             //StackLayout.Children.Insert(0, searchBar);
+        }
+
+        void ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            
+            Animal tappedPost = (Animal)((ListView)sender).SelectedItem;
+
+            //if (e.Item == null)
+            //{
+            //    DisplayAlert("Item is null", "Item Null", "Cancel");
+            //    return;
+            //}
+            Navigation.PushAsync(new AnimalDetailPage(tappedPost));
         }
     }
 }

@@ -64,7 +64,7 @@
                     <ScrollView Grid.Row="1">
 
                         <StackLayout>
-                            <ListView x:Name="animalListView" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100">
+                            <ListView x:Name="animalListView" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100" ItemSelected="ItemTapped">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell>
