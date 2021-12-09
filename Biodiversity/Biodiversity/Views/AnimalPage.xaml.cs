@@ -101,7 +101,15 @@ namespace Biodiversity.Views
                Desc = "The body of the Tailless whip-scorpion is is flat. It has ten legs, and its first legs are very long, thin and whip-like. This Amblyplygid’s pedipalps (pincer-bearing front arms adapted for sensory and predatory use) are spiny and powerful. Whip-scorpions found in the El Yunque National Forest can be quite large (19 to 25 inches/48 to 63 centimeters, including legs) when compared to those found in other tropical areas, possibly because there are no large mammal predators on the island. Adult females are larger than males.",
                Name = "Tailless Whip-Scorpion",
                ImagePath = "https://alfredocolon.zenfolio.com/img/s/v-10/p1959880747-3.jpg"
-            }
+            },
+
+            new Animal
+            {
+               Id = 10,
+               Desc = "The Mountain Mullet is one of the native fishes that occur in steep mountain streams within the forest. It is locally fished for sport and food. This fresh water fish is an omnivore but prefers mollusks, small shrimps, spiders and other insects, often feeding near the water surface. The fish can be found on the upper reaches of streams and rivers in the island mountains sections.",
+               Name = "Mountain Mullet",
+               ImagePath = "https://inaturalist-open-data.s3.amazonaws.com/photos/21567120/large.jpg"
+            },
 
         };
         ObservableCollection<Animal> listCon = new ObservableCollection<Animal>(animalList);
