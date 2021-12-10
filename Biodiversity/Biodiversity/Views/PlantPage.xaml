@@ -64,6 +64,7 @@
                     <ScrollView Grid.Row="1">
 
                         <StackLayout>
+                            <SearchBar x:Name="mySearchBar" IsVisible="false" Placeholder="Search plants..." BindingContext="plantList" TextChanged="mySearchBar_TextChanged"></SearchBar>
                             <ListView x:Name="plantListView" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100" ItemSelected="ItemTapped">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>

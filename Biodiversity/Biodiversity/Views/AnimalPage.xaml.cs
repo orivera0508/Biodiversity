@@ -178,5 +178,11 @@ namespace Biodiversity.Views
             //}
             Navigation.PushAsync(new AnimalDetailPage(tappedPost));
         }
+
+        private void mySearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var searchResult = animalList.Where(c=>c.Name.ToLower().Contains(mySearchBar.Text.ToLower()));
+            animalListView.ItemsSource = searchResult;
+        }
     }
 }

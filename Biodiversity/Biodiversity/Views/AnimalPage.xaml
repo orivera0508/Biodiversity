@@ -64,7 +64,7 @@
                     <ScrollView Grid.Row="1">
 
                         <StackLayout x:Name="StackLayout">
-                            <SearchBar x:Name="mySearchBar" IsVisible="false" Placeholder="Search animals..."></SearchBar>
+                            <SearchBar x:Name="mySearchBar" IsVisible="false" Placeholder="Search animals..." BindingContext="animalList" TextChanged="mySearchBar_TextChanged"></SearchBar>
                             <ListView x:Name="animalListView" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100" ItemSelected="ItemTapped">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>

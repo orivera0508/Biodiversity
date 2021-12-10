@@ -130,9 +130,14 @@ namespace Biodiversity.Views
         }
         void OnSearchClicked(object sender, EventArgs e)
         {
-            searchButton.IsEnabled = false;
-            SearchBar searchBar = new SearchBar { Placeholder = "Search items..." };
-            //StackLayout.Children.Insert(0, searchBar);
+            if (mySearchBar.IsVisible == false)
+            {
+                mySearchBar.IsVisible = true;
+            }
+            else
+            {
+                mySearchBar.IsVisible = false;
+            }
         }
         void ItemTapped(object sender, ItemTappedEventArgs e)
         {
@@ -145,6 +150,12 @@ namespace Biodiversity.Views
             //    return;
             //}
             Navigation.PushAsync(new PlantDetailPage(tappedPost));
+        }
+
+        private void mySearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var searchResult = plantList.Where(c => c.Name.ToLower().Contains(mySearchBar.Text.ToLower()));
+            plantListView.ItemsSource = searchResult;
         }
     }
 }
