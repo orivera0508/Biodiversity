@@ -12,9 +12,9 @@ namespace Biodiversity.Views
     public partial class PlantPage : ContentPage
     {
         
-        public static List<Plant> plantList = new List<Plant>
+        public static List<Item> plantList = new List<Item>
         {
-            new Plant
+            new Item
             {
                 Id = 1,
                 Desc = "The Sintenis’ Guava is a small evergreen tree that grows to 30 feet. The trunk is slanted and grooved, larger at the bottom, with gray, scaly and shaggy, slightly peeling bark. Branches are slender and hairless, light green color when young, becoming grayish with time. The fruit it produces has a hard skin and contains several small seeds. Fruits and fragrant flower buds are collected from spring to autumn.",
@@ -24,7 +24,7 @@ namespace Biodiversity.Views
                 Lng = -65.804899
             },
 
-            new Plant
+            new Item
             {
                 Id = 2,
                 Desc = "Sintenis’ Holly is a shrub or small tree. Alternating elliptically shaped leaves that are notched at the tip with the edges turned under. The bark is gray, smooth, and typically covered with mosses and liverworts. The flowers are white and the reddish-brown fruits are green when immature. This vegetation is often exposed to winds and typically shrouded with clouds. The extreme rarity of the species makes it vulnerable to natural catastrophes such as hurricanes.",
@@ -34,7 +34,7 @@ namespace Biodiversity.Views
                 Lng = -65.804769
             },
 
-            new Plant
+            new Item
             {
                Id = 3,
                Desc = "Palo de Jazmín is an evergreen tree only known from one individual growing in the Palo Colorado forest of the Luquillo Mountains. The tree can grow up to 66ft in height. The leaves are alternate, lack stipules, and have entire margins that are slightly turned under. The inflorescence is a three to six flowered raceme, each flower being borne on curved pedicel. Palo de Jazmín has suffered from the destruction of most of its natural-forest habitat through agricultural, forestry, and human activity. The plant is so rare that at one point it was thought to be extinct until “re-discovered” in 1982.",
@@ -44,7 +44,7 @@ namespace Biodiversity.Views
                Lng = -65.804569
             },
 
-            new Plant
+            new Item
             {
                Id = 4,
                Desc = "The original extent of the species on the island is unknown, but it was probably common only in the moist limestone region. Because of deforestation and disturbance, the species has become common throughout the moist and wet areas of Puerto Rico. The Maga flower is the “national” flower of the commonwealth of Puerto Rico.  This plant is small to medium size with dark green foliage and large, dark pink or red flowers. In natural forests, the boles of this tree are generally straight, round, and free of limbs.",
@@ -54,7 +54,7 @@ namespace Biodiversity.Views
                Lng = -65.804456
             },
 
-            new Plant
+            new Item
             {
                Id = 5,
                Desc = "Roytonea borinquena is a rapidly growing tree that reaches an average height of 40 to 85 feet. Young trees can average a 3-foot growth annually. The tree has a smooth, gray trunk with a swollen base and gracefully dropping fronds. The upper trunk is encased in a green column of leaf sheaths. The leaves, arranged on both sides, have short leafstalks with a sheath and blade. The flower is an important nectar source for honey bees, and, like those are vital resources for the highly endangered Puerto Rican Parrot. Seeds are commonly dispersed by birds and rodents. The leaves were used as a roof thatch and dry leaf sheaths (yaguas) were spread out flat to fashion sides for rustic building.",
@@ -64,7 +64,7 @@ namespace Biodiversity.Views
                Lng = -65.804898
             },
 
-            new Plant
+            new Item
             {
                Id = 6,
                Desc = "The Rain Lily is a small plant, with white occasionally pinkish-tinged, six-petal flowers. They bloom from July through October. Glossy, dark green, linear leaves, typically absent when the plant is flowering. The whitish-green perigone enclosing the outer parts of the flower. ",
@@ -74,7 +74,7 @@ namespace Biodiversity.Views
                Lng = -65.804332
             },
 
-            new Plant
+            new Item
             {
                Id = 7,
                Desc = "The Palo Bronco is an evergreen shrub with blunt-pointed leaves. Upper leaf surfaces are green and lower surfaces are a paler green with many yellowish, needle-like hairs. Flowers with white/pink petals and thin-fleshed fruit with large stone; flowers and fruits intermittently throughout the year. Contact with needle-like, stringing hairs on the lower surface or leaves of this plant can cause severe skin irritation and mild skin rash (Dermatitis). Do not eat the leaves on this plant.",
@@ -84,7 +84,7 @@ namespace Biodiversity.Views
                Lng = -65.804556
             },
 
-            new Plant
+            new Item
             {
                Id = 8,
                Desc = "Carrasco is an evergreen, poisonous, under-story shrub or tree that can be easily recognized by its slender, un-branched trunk with large, lance-shaped spreading leaves, clusters of tiny, dark-red flowers and small reddish-black fruits. The white sap of the foliage and bark is caustic and can cause skin irritation to some people. When the skin comes into contact with the caustic, poisonous sap from the foliage and bark of this shrub, it can cause a reaction similar to poison ivy in some people. Severe skin irritation and skin rash (Dermatitis). Do not eat the sap of this poisonous shrub.",
@@ -94,7 +94,7 @@ namespace Biodiversity.Views
                Lng = -65.804111
             },
 
-            new Plant
+            new Item
             {
                Id = 9,
                Desc = "The tropical plant is a popular ornament which escapes cultivation and is found on shady areas near water or thickest to middle forest elevations or even on the coastal plain. It has a creeping, cane-like stem about 6 feet high, elliptical leaves and yellow floral spike piratically enclosed a light green sheath. The leaves of the Dumbcane plant contain needle-Ike calcium oxalate crystals and proteolytic enzymes. Eating the leaves can cause temporary paralysis of the mouth, tongue, throat and vocal cords. If accidentally rubbed into the eyes the crystals from the leaf can cause temporary vision loss and swelling of the eyelid.",
@@ -104,7 +104,7 @@ namespace Biodiversity.Views
                Lng = -65.804213
             },
 
-            new Plant
+            new Item
             {
                Id = 10,
                Desc = "Plumerias can grow to be large shrubs or even small trees. In tropical regions, plumeria may reach a height of 30 to 40 inches and 20 inches wide. They have wide spaced thick branches, round or pointed, long leathery, green leaves in clusters near the branch tips. Plumeria produces very fragrant clusters of showy, waxy flowers in various shades of rose and pink. All parts of the plumeria are considered toxic and the sap can cause a rash in sensitive people. The alkaloids in plumeria make the plant extremely bitter and there are no definitive cases of plumeria poisoning. Do not touch or eat flowers or any part of the plant; it may cause skin irritation or mild stomach pain and cramping in some people.",
@@ -115,7 +115,7 @@ namespace Biodiversity.Views
             },
         };
 
-        public ObservableCollection<Plant> ListCon { get; } = new ObservableCollection<Plant>(plantList);
+        public ObservableCollection<Item> ListCon { get; } = new ObservableCollection<Item>(plantList);
         public PlantPage()
         {
             InitializeComponent();
@@ -140,7 +140,7 @@ namespace Biodiversity.Views
         void ItemTapped(object sender, ItemTappedEventArgs e)
         {
 
-            Plant tappedPost = (Plant)((ListView)sender).SelectedItem;
+            Item tappedPost = (Item)((ListView)sender).SelectedItem;
 
             Navigation.PushAsync(new PlantDetailPage(tappedPost));
         }

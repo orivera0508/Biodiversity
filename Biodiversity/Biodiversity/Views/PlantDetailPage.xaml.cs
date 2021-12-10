@@ -9,13 +9,13 @@ namespace Biodiversity.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PlantDetailPage : ContentPage
     {
-        public PlantDetailPage(Plant plantItem)
+        public PlantDetailPage(Item plantItem)
         {
             InitializeComponent();
             BindingContext = plantItem;
             plantInstance = plantItem;
         }
-        public Plant plantInstance;
+        public Item plantInstance;
 
         void OnLocationClicked(object sender, EventArgs e)
         {

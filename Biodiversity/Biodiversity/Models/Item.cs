@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Biodiversity.Models
 {
-    public class Animal
+    public class Item
     {
         public int Id { get; set; }
 

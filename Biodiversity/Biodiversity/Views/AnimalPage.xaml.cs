@@ -12,8 +12,8 @@ namespace Biodiversity.Views
     public partial class AnimalPage : ContentPage
     {
 
-        private ObservableCollection<Animal> _animals = new ObservableCollection<Animal>();
-        public ObservableCollection<Animal> Animals
+        private ObservableCollection<Item> _animals = new ObservableCollection<Item>();
+        public ObservableCollection<Item> Animals
         {
             get { return _animals; }
             set
@@ -24,9 +24,9 @@ namespace Biodiversity.Views
         }
 
 
-        public static List<Animal> animalList = new List<Animal>
+        public static List<Item> animalList = new List<Item>
         {
-            new Animal
+            new Item
             {
                 Id = 1,
                 Desc = "The Puerto Rican Emerald is a tiny, iridescent green hummingbird that measures 3.5 to 4 inches (9 to 10 centimeters.) It can be easily identified by its small size, shiny green body, forked tail and smooth un-crested head.",
@@ -37,7 +37,7 @@ namespace Biodiversity.Views
 
             },
 
-            new Animal
+            new Item
             {
                 Id = 2,
                 Desc = "A tiny, brilliant-green resident of wooded habitats. There are no similar species within its range. Typically perches at low to middle levels in the forest and sallies forth to snag insects from the undersides of leaves. When not actively pursuing a meal, sits rather motionless. Most active, and thus most easily seen, when the sun comes out following rain. Most often first detected by its voice: a loud buzzy “zhip, zhip.”",
@@ -47,7 +47,7 @@ namespace Biodiversity.Views
                 Lng = -65.785433
             },
 
-            new Animal
+            new Item
             {
                Id = 3,
                Desc = "The Puerto Rican coqui (pronounced ko-kee) is a small arboreal frog that’s brown, yellow, or green in color. Its scientific genus name—Eleutherodactylus—means “free toes” because, unlike many frogs, the coqui doesn’t have webbed feet. These amphibians have special disks, or toe pads, on their feet that allow them to climb up vertical structures and cling to trees and leaves. Puerto Rican coquis are one to two inches (2.5 to 5 centimeters) long and weigh two to four ounces (57 to 113 grams). They are one of the largest frog species found in Puerto Rico.",
@@ -57,7 +57,7 @@ namespace Biodiversity.Views
                Lng = -65.785421
             },
 
-            new Animal
+            new Item
             {
                Id = 4,
                Desc = "Is the only giant Anolis in mainland Puerto Rico, the other giant form A. roosevelti from Culebra Island is now probably extinct. In the most common phase the body, tail, and extremities are emerald green or yellowish green. The head is sometimes suffused with blue and there are some purple scales on the snout and in back of the orbit. The less common phase is gray or greenish gray with dark brown mottles (which may form bars) and dots. In both phases the eye is surrounded by yellow, the dewlap is yellow, and the tongue and palate light orange-yellow.",
@@ -67,7 +67,7 @@ namespace Biodiversity.Views
                Lng = -65.785321
             },
 
-            new Animal
+            new Item
             {
                Id = 5,
                Desc = "At seven feet long, Puerto Rican boas—also known as yellow tree boas—are the largest snakes on the island of Puerto Rico. They’re relatively slender reptiles with a dull brown or gray coloration and dark blotches along their bodies. These snakes are not venomous. Instead of using venom to immobilize prey, the boas are constrictors that use their bodies to wrap around prey until it suffocates.",
@@ -77,7 +77,7 @@ namespace Biodiversity.Views
                Lng = -65.785314
             },
 
-            new Animal
+            new Item
             {
                Id = 6,
                Desc = "The Puerto Rican crested toad is the only toad species native to Puerto Rico. Named for the bony crests above its large, golden eyes, this toad is also identifiable by an upturned snout and bumpy skin that feels like it’s covered in pebbles. Males are olive green with pads on their thumbs, and females have rougher, dull-brown skin and more prominent crests.",
@@ -87,7 +87,7 @@ namespace Biodiversity.Views
                Lng = -65.785321
             },
            
-            new Animal
+            new Item
             {
                Id = 7,
                Desc = "Plump brown bird of shady understories in humid evergreen forest of tropical lowlands. Found singly or in pairs, perched quietly at low to middle levels. Often sits still for long periods and is easily overlooked. Note the stout bill, reddish eyes, streaky underparts, bushy white whiskers, and finely dappled whitish to buffy upperparts.",
@@ -97,7 +97,7 @@ namespace Biodiversity.Views
                Lng = -65.785376
             },
 
-            new Animal
+            new Item
             {
                Id = 8,
                Desc = "The Upland Gecko is one of the larger-sized gecko species. It typically measures up to 5.7 inches (14.5 centimeters) snout to vent, and has a dark-brown upper body with darker-brown or black spots which are larger on the tail. The underbody is usually orange or reddish-pink with a gray throat that may have dark mottled areas.",
@@ -107,7 +107,7 @@ namespace Biodiversity.Views
                Lng = -65.785680
             },
 
-            new Animal
+            new Item
             {
                Id = 9,
                Desc = "The body of the Tailless whip-scorpion is is flat. It has ten legs, and its first legs are very long, thin and whip-like. This Amblyplygid’s pedipalps (pincer-bearing front arms adapted for sensory and predatory use) are spiny and powerful. Whip-scorpions found in the El Yunque National Forest can be quite large (19 to 25 inches/48 to 63 centimeters, including legs) when compared to those found in other tropical areas, possibly because there are no large mammal predators on the island. Adult females are larger than males.",
@@ -117,7 +117,7 @@ namespace Biodiversity.Views
                Lng = -65.785571
             },
 
-            new Animal
+            new Item
             {
                Id = 10,
                Desc = "The Mountain Mullet is one of the native fishes that occur in steep mountain streams within the forest. It is locally fished for sport and food. This fresh water fish is an omnivore but prefers mollusks, small shrimps, spiders and other insects, often feeding near the water surface. The fish can be found on the upper reaches of streams and rivers in the island mountains sections.",
@@ -129,7 +129,7 @@ namespace Biodiversity.Views
 
         };
 
-        public ObservableCollection<Animal> ListCon { get; } = new ObservableCollection<Animal>(animalList);
+        public ObservableCollection<Item> ListCon { get; } = new ObservableCollection<Item>(animalList);
         public AnimalPage()
         {
             InitializeComponent();
@@ -159,7 +159,7 @@ namespace Biodiversity.Views
         void ItemTapped(object sender, ItemTappedEventArgs e)
         {
             
-            Animal tappedPost = (Animal)((ListView)sender).SelectedItem;
+            Item tappedPost = (Item)((ListView)sender).SelectedItem;
             Navigation.PushAsync(new AnimalDetailPage(tappedPost));
         }
 

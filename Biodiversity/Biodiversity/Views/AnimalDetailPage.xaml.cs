@@ -9,13 +9,13 @@ namespace Biodiversity.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AnimalDetailPage : ContentPage
     {
-        public AnimalDetailPage(Animal animalItem)
+        public AnimalDetailPage(Item animalItem)
         {
             InitializeComponent();
             BindingContext = animalItem;
             animalInstance = animalItem;
         }
-        public Animal animalInstance;
+        public Item animalInstance;
         
         protected override void OnAppearing()
         {

@@ -50,14 +50,20 @@
         <xct:TabViewItem Text="What's New" TextColorSelected="Green">
             <xct:TabViewItem.Content>
                 <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <ScrollView Grid.Row="1">
-                        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10" BackgroundColor="#4caf50">
-                        </StackLayout>
-                    </ScrollView>
+                    <ListView x:Name="itemListView" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100" ItemTapped="ItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <StackLayout Orientation="Horizontal"  Padding="20,20,20,20">
+                                            <Image Source="{Binding ImagePath}" ScaleX="2" ScaleY="2" HorizontalOptions="StartAndExpand" Aspect="AspectFill" Margin="10,10,10,10" WidthRequest="80" />
+                                            <Label Text="{Binding Name}" TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" WidthRequest="200" HeightRequest="50"></Label>
+                                        </StackLayout>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </Grid>
             </xct:TabViewItem.Content>
         </xct:TabViewItem>
