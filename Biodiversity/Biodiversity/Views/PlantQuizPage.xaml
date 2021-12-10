@@ -27,7 +27,7 @@
                        FontSize="14"/>
 
                 <Label x:Name="lblpreguntita" 
-                       Text="1. Which one of these plants is poisonous?" 
+                       Text="Click Start to Play!" 
                        TextColor="White"
                        HorizontalOptions="Center"
                        VerticalOptions="CenterAndExpand"
@@ -36,7 +36,7 @@
             </StackLayout>
 
             <StackLayout Margin="20, 150,20,20">
-                <Button Text="Rain Lily" x:Name="btnresp1"
+                <Button Text="Play!" x:Name="btnresp1"
                     TextColor="White"
                     BackgroundColor="Gray"
                     BorderColor="Aquamarine"
@@ -44,7 +44,7 @@
                     CornerRadius="10"
                     Clicked="Button1_Clicked" ></Button>
 
-                <Button Text="Maga Tree" x:Name="btnresp2"
+                <Button Text="-" x:Name="btnresp2"
                     TextColor="White"
                     BackgroundColor="Gray"
                     BorderColor="Aquamarine"
@@ -52,7 +52,7 @@
                     CornerRadius="10"
                     Clicked="Button2_Clicked" ></Button>
 
-                <Button Text="Frangipani" x:Name="btnresp3"
+                <Button Text="-" x:Name="btnresp3"
                     TextColor="White"
                     BackgroundColor="Gray"
                     BorderColor="Aquamarine"
@@ -60,21 +60,14 @@
                     CornerRadius="10"
                     Clicked="Button3_Clicked" ></Button>
 
-                <Button Text="Sintenis Holly" x:Name="btnresp4"
+                <Button Text="-" x:Name="btnresp4"
                     TextColor="White"
                     BackgroundColor="Gray"
                     BorderColor="Aquamarine"
                     BorderWidth="3"
                     CornerRadius="10"
                     Clicked="Button4_Clicked" ></Button>
-               
-               
-
             </StackLayout>
-           
         </Grid>
-        
-       
     </Grid>
-
 </ContentPage>

@@ -24,6 +24,6 @@ namespace Biodiversity.Views
 
         public Question() { }
 
-        public Question setting_pregunta(Question quest) { return quest; }
+        public Question setupQuestion(Question quest) { return quest; }
     }
 }

@@ -3,20 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="Biodiversity.Views.HomePage"
-             xmlns:vm="clr-namespace:Biodiversity.ViewModels"
              Title="{Binding Title}">
 
-    <ContentPage.BindingContext>
-        <vm:HomeViewModel />
-    </ContentPage.BindingContext>
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">Blue</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
-
-    <!--Buttons towards Plant and Animal Page-->
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="icon_palm.png" 
                     Command="{Binding PlantsPageCommand}"
@@ -29,7 +23,7 @@
                     Order="Primary"
                     Priority="0" />
     </ContentPage.ToolbarItems>
-
+    
     <!--Welcome Page-->
     <xct:TabView>
         <xct:TabViewItem Text="Welcome!" TextColorSelected="Green">
@@ -39,35 +33,6 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <!--
-                    <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                            <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                                <Label Text="Tab View testing" FontSize="Title"/>
-                            </ContentView>
-                        </StackLayout>
-                    </StackLayout>
-                    <ScrollView Grid.Row="1">
-                        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                            <Label Text="Testing" FontSize="Title"/>
-                            <Label Text="No Branch Required" FontSize="16" Padding="0,0,0,0"/>
-                            <Label FontSize="16" Padding="0,24,0,0">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <FormattedString.Spans>
-                                            <Span Text="Learn more at "/>
-                                            <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                                        </FormattedString.Spans>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                            <Button Margin="0,10,0,0" Text="Learn more"
-                        Command="{Binding OpenWebCommand}"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White" />
-                        </StackLayout>
-                    </ScrollView>
-                    -->
 
                     <StackLayout  Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BackgroundColor="Black">
                         <StackLayout>
@@ -80,25 +45,27 @@
                 </Grid>
             </xct:TabViewItem.Content>
         </xct:TabViewItem>
-        
+
         <!--Whats New Page-->
         <xct:TabViewItem Text="What's New" TextColorSelected="Green">
             <xct:TabViewItem.Content>
                 <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-
-                    <ScrollView Grid.Row="1">
-                        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10" BackgroundColor="#4caf50">
-                            
-                        </StackLayout>
-                    </ScrollView>
-
+                    <ListView x:Name="itemListView" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100" ItemTapped="ItemTapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <StackLayout Orientation="Horizontal"  Padding="20,20,20,20">
+                                            <Image Source="{Binding ImagePath}" ScaleX="2" ScaleY="2" HorizontalOptions="StartAndExpand" Aspect="AspectFill" Margin="10,10,10,10" WidthRequest="80" />
+                                            <Label Text="{Binding Name}" TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" WidthRequest="200" HeightRequest="50"></Label>
+                                        </StackLayout>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </Grid>
             </xct:TabViewItem.Content>
         </xct:TabViewItem>
     </xct:TabView>
-
 </ContentPage>

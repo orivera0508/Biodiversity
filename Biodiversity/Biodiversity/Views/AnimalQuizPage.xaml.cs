@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Biodiversity.Views
@@ -71,14 +69,10 @@ namespace Biodiversity.Views
                 correct = "Fruits"
             }
         };
-        int point = 1, score = 0;
+        int point = 0, score = 0;
         string correctResponse;
-        protected void OnNavigatedTo(NavigationEventArgs e)
-        {
 
-        }
-
-        private string setQuestion(int ID)
+        private string SetQuestion(int ID)
         {
             Question list = listapreguntas.Where(a => a.Id == ID).SingleOrDefault();
             if (point != listapreguntas.Count()+1)
@@ -94,7 +88,7 @@ namespace Biodiversity.Views
             else
             {
                 DisplayAlert("Game Over!", "Your final score is: " + score + " / " + listapreguntas.Count(), "OK");
-                Shell.Current.GoToAsync($"//{nameof(TriviaPage)}");
+                Navigation.PopAsync();
             }
             
             return correctResponse;
@@ -107,7 +101,7 @@ namespace Biodiversity.Views
                 score++;
             }
             point++;
-            setQuestion(point);
+            SetQuestion(point);
         }
 
         private void Button2_Clicked(object sender, EventArgs e)
@@ -117,7 +111,7 @@ namespace Biodiversity.Views
                 score++;
             }
             point++;
-            setQuestion(point);
+            SetQuestion(point);
         }
 
         private void Button3_Clicked(object sender, EventArgs e)
@@ -127,7 +121,7 @@ namespace Biodiversity.Views
                 score++;
             }
             point++;
-            setQuestion(point);
+            SetQuestion(point);
         }
       
         private void Button4_Clicked(object sender, EventArgs e)
@@ -137,7 +131,7 @@ namespace Biodiversity.Views
                 score++;
             }
             point++;
-            setQuestion(point);
+            SetQuestion(point);
         }
     }
 }

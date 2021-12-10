@@ -1,0 +1,32 @@
+﻿using System;
+using Biodiversity.Models;
+using Xamarin.Essentials;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace Biodiversity.Views
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class AnimalDetailPage : ContentPage
+    {
+        public AnimalDetailPage(Item animalItem)
+        {
+            InitializeComponent();
+            BindingContext = animalItem;
+            animalInstance = animalItem;
+        }
+        public Item animalInstance;
+        
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
+
+        void OnLocationClicked(object sender, EventArgs e)
+        {
+            var location = new Location(animalInstance.Lat, animalInstance.Lng);
+            var options = new MapLaunchOptions { Name = animalInstance.Name + " Sighting" };
+            Xamarin.Essentials.Map.OpenAsync(location,options);
+        }
+    }
+}

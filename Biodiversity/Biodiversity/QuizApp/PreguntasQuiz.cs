@@ -14,7 +14,7 @@ namespace Biodiversity.Views
 
         public void BuildingQuestions()
         {
-            preguntas.CreandoInstancia();
+            preguntas.createInstance();
 
         }
 
