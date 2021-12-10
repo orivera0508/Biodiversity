@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Collections.ObjectModel;
@@ -135,8 +133,6 @@ namespace Biodiversity.Views
         public AnimalPage()
         {
             InitializeComponent();
-            //BindingContext = new AnimalViewModel();
-            //Animals = services.GetAnimal();
             animalListView.ItemsSource = ListCon;
 
         }
@@ -157,12 +153,6 @@ namespace Biodiversity.Views
             {
                 mySearchBar.IsVisible = false;
             }
-
-            //searchButton.IsEnabled = false;
-            //SearchBar searchBar = new SearchBar { Placeholder = "Search animals..." };
-            //searchBar.BindingContext = listCon;
-            ////StackLayout.Children.Add(searchBar);
-            //StackLayout.Children.Insert(0, searchBar);
             
         }
 
@@ -170,12 +160,6 @@ namespace Biodiversity.Views
         {
             
             Animal tappedPost = (Animal)((ListView)sender).SelectedItem;
-
-            //if (e.Item == null)
-            //{
-            //    DisplayAlert("Item is null", "Item Null", "Cancel");
-            //    return;
-            //}
             Navigation.PushAsync(new AnimalDetailPage(tappedPost));
         }
 

@@ -67,14 +67,7 @@
                     BorderWidth="3"
                     CornerRadius="10"
                     Clicked="Button4_Clicked" ></Button>
-               
-               
-
             </StackLayout>
-           
         </Grid>
-        
-       
     </Grid>
-
 </ContentPage>

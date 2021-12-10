@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Collections.ObjectModel;
@@ -144,11 +142,6 @@ namespace Biodiversity.Views
 
             Plant tappedPost = (Plant)((ListView)sender).SelectedItem;
 
-            //if (e.Item == null)
-            //{
-            //    DisplayAlert("Item is null", "Item Null", "Cancel");
-            //    return;
-            //}
             Navigation.PushAsync(new PlantDetailPage(tappedPost));
         }
 
