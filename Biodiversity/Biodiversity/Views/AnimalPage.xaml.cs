@@ -149,9 +149,21 @@ namespace Biodiversity.Views
 
         void OnSearchClicked(object sender, EventArgs e)
         {
-            searchButton.IsEnabled = false;
-            SearchBar searchBar = new SearchBar { Placeholder = "Search animals..." };
+            if (mySearchBar.IsVisible == false)
+            {
+                mySearchBar.IsVisible = true;
+            }
+            else
+            {
+                mySearchBar.IsVisible = false;
+            }
+
+            //searchButton.IsEnabled = false;
+            //SearchBar searchBar = new SearchBar { Placeholder = "Search animals..." };
+            //searchBar.BindingContext = listCon;
+            ////StackLayout.Children.Add(searchBar);
             //StackLayout.Children.Insert(0, searchBar);
+            
         }
 
         void ItemTapped(object sender, ItemTappedEventArgs e)
