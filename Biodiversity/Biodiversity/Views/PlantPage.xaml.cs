@@ -116,12 +116,12 @@ namespace Biodiversity.Views
                Lng = -65.804910
             },
         };
-        ObservableCollection<Plant> listCon = new ObservableCollection<Plant>(plantList);
-        public ObservableCollection<Plant> ListCon { get { return listCon; } }
+
+        public ObservableCollection<Plant> ListCon { get; } = new ObservableCollection<Plant>(plantList);
         public PlantPage()
         {
             InitializeComponent();
-            plantListView.ItemsSource = listCon;
+            plantListView.ItemsSource = ListCon;
         }
         void OnAnimalClicked(object sender, EventArgs e)
         {
