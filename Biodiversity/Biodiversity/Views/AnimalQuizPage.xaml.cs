@@ -73,12 +73,8 @@ namespace Biodiversity.Views
         };
         int point = 0, score = 0;
         string correctResponse;
-        protected void OnNavigatedTo(NavigationEventArgs e)
-        {
 
-        }
-
-        private string setQuestion(int ID)
+        private string SetQuestion(int ID)
         {
             Question list = listapreguntas.Where(a => a.Id == ID).SingleOrDefault();
             if (point != listapreguntas.Count()+1)
@@ -107,7 +103,7 @@ namespace Biodiversity.Views
                 score++;
             }
             point++;
-            setQuestion(point);
+            SetQuestion(point);
         }
 
         private void Button2_Clicked(object sender, EventArgs e)
@@ -117,7 +113,7 @@ namespace Biodiversity.Views
                 score++;
             }
             point++;
-            setQuestion(point);
+            SetQuestion(point);
         }
 
         private void Button3_Clicked(object sender, EventArgs e)
@@ -127,7 +123,7 @@ namespace Biodiversity.Views
                 score++;
             }
             point++;
-            setQuestion(point);
+            SetQuestion(point);
         }
       
         private void Button4_Clicked(object sender, EventArgs e)
@@ -137,7 +133,7 @@ namespace Biodiversity.Views
                 score++;
             }
             point++;
-            setQuestion(point);
+            SetQuestion(point);
         }
     }
 }

@@ -33,6 +33,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\ConservationDetailPage.xaml.cs">
+      <DependentUpon>ConservationDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\PlantDetailPage.xaml.cs">
       <DependentUpon>PlantDetailPage.xaml</DependentUpon>
     </Compile>

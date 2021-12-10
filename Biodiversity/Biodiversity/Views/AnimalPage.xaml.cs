@@ -130,14 +130,14 @@ namespace Biodiversity.Views
             },
 
         };
-        ObservableCollection<Animal> listCon = new ObservableCollection<Animal>(animalList);
-        public ObservableCollection<Animal> ListCon { get { return listCon; } }
+
+        public ObservableCollection<Animal> ListCon { get; } = new ObservableCollection<Animal>(animalList);
         public AnimalPage()
         {
             InitializeComponent();
             //BindingContext = new AnimalViewModel();
             //Animals = services.GetAnimal();
-            animalListView.ItemsSource = listCon;
+            animalListView.ItemsSource = ListCon;
 
         }
 
