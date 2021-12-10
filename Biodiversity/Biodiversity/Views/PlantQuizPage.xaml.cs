@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Biodiversity.Views
@@ -89,8 +87,8 @@ namespace Biodiversity.Views
             }
             else
             {
+                Navigation.PopAsync();
                 DisplayAlert("Game Over!", "Your final score is: " + score + " / " + listapreguntas.Count(), "OK");
-                Shell.Current.GoToAsync($"//{nameof(TriviaPage)}");
             }
 
             return correctResponse;
