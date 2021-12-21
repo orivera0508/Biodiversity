@@ -10,14 +10,12 @@ namespace Biodiversity.Views
         public HomePage()
         {
             InitializeComponent();
-            var AnimalLstItems = AnimalPage.animalList.Skip(Math.Max(0, AnimalPage.animalList.Count() - 2)).Take(3).ToList();
-            var PlantLstItems = PlantPage.plantList.Skip(Math.Max(0, PlantPage.plantList.Count() - 2)).Take(3).ToList();
-
-            var combination = AnimalLstItems.Concat(PlantLstItems);
-
-            itemListView.ItemsSource = combination;
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+        }
 
         void OnAnimalClicked(object sender, EventArgs e)
         {
@@ -33,8 +31,8 @@ namespace Biodiversity.Views
 
         void ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Item tappedPost = (Item)((ListView)sender).SelectedItem;
-            Navigation.PushAsync(new PlantDetailPage(tappedPost));
+            //Item tappedPost = (Item)((ListView)sender).SelectedItem;
+            //Navigation.PushAsync(new PlantDetailPage(tappedPost));
         }
     }
 }

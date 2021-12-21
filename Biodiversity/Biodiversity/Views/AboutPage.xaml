@@ -1,10 +1,8 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Biodiversity.Views.ConservationDetailPage">
+             x:Class="Biodiversity.Views.AboutPage">
     <ContentPage.Content>
         <ScrollView>
-<<<<<<< HEAD
-=======
             <!--
             <StackLayout Spacing="20" Padding="15">
                 <Frame BorderColor="#2196F3" CornerRadius="5" Padding="8">
@@ -23,7 +21,6 @@
                 Clicked="OnLocationClicked" />
             </StackLayout>
             -->
->>>>>>> 309fbfe573668d8804bcd10861e80614bbe197d0
             <Grid RowSpacing="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -33,33 +30,14 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-<<<<<<< HEAD
-                <BoxView Grid.Row="0" Color="#f8ed62"/>
-                <StackLayout Grid.Row="0" Spacing="10" Padding="15" VerticalOptions="CenterAndExpand">
-                    <Image Source="{Binding ImagePath}"/>
-                    <Label Text="{Binding Name}" FontSize="Large" TextColor="{StaticResource Primary}" HorizontalOptions="CenterAndExpand"/>
-                </StackLayout>
-                <BoxView Grid.Row="1" Color="#eddd0b"/>
-                <StackLayout Grid.Row="1" Spacing="20" Padding="15">
-                    <Label Text="General Information" FontSize="Large" TextColor="{StaticResource Primary}"/>
-                    <Label Text="{Binding Desc}" FontSize="Medium" TextColor="{StaticResource Primary}"/>
-                    <Button Text="Visit Website"             
-                        HorizontalOptions="Center"
-                        Clicked="OnUrlClicked" />   
-=======
-                <BoxView Grid.Row="0" Color="#1B7B76"/>
                 <StackLayout Grid.Row="0" Spacing="10" Padding="15" VerticalOptions="CenterAndExpand">
                     <Image Source="{Binding ImagePath}"/>
                     <Label Text="{Binding Name}" FontSize="Medium" TextColor="White" HorizontalOptions="CenterAndExpand"/>
                 </StackLayout>
-                <BoxView Grid.Row="1" Color="#0E4B85"/>
+                <BoxView Grid.Row="1" Color="#26672C"/>
                 <StackLayout Grid.Row="1" Spacing="20" Padding="15">
-                    <Label Text="General Information" FontSize="Medium" TextColor="White"/>
-                    <Label Text="{Binding Desc}" FontSize="Small" TextColor="White"/>
-                    <Button Text="View Website"             
-                        HorizontalOptions="Center"
-                        Clicked="OnUrlClicked" />
->>>>>>> 309fbfe573668d8804bcd10861e80614bbe197d0
+                    <Label Text="About" FontSize="Medium" TextColor="White"/>
+                    <Label Text="The application Biodiversity was developed by the group composed of Samuel D. Hernandez Camacho 114287, Orlando Rivera Guevara 104943, Jennifer Barbosa Rojas 107047, Jonathan Camacho Ortega 117820, and Robert Quiñones Melendez 107321 of the Polytechnic University of Puerto Rico in the department of Computer Science. The goal of this innovative application is to inform the user about endemic plant and animal species from the island of Puerto Rico and most importantly where to locate them. Quizzes within the app allow the user to test their knowledge through interactive games that make it an enjoyable experience. In addition, the user may find conservation resources where they can get involved with the community depending on their interests along the areas of environmental conservation in Puerto Rico. The mission that drives this application is the need for Puerto Rican residents along with tourists from around the world to appreciate the unique richness and value that the island offers in biodiversity and the importance of protecting it as most of these species are endangered. It is in the hands of the people who care to restore, conserve, and preserve the beauty and the natural cycle that brings balance to the world as we know it and this app strives to make this contribution." FontSize="Small" TextColor="#FFFFFF"/>
                 </StackLayout>
             </Grid>
         </ScrollView>
