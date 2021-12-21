@@ -50,7 +50,7 @@ namespace Biodiversity.Views
             new Question
             {
                 Id = 4,
-                quest_ = "4. When did the Small Indian Mongoose were brought to Puerto Rico?",
+                quest_ = "4. When were the Small Indian Mongoose brought to Puerto Rico?",
                 resp1_ = "1877",
                 resp2_ = "1980",
                 resp3_ = "1860",
