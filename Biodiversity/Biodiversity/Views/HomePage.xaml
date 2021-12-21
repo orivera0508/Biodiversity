@@ -34,14 +34,22 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <StackLayout  Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BackgroundColor="Black">
+                    <StackLayout  Grid.Row="1" VerticalOptions="Fill" BackgroundColor="Black">
                         <StackLayout>
-                            <ContentView VerticalOptions="FillAndExpand">
-                                <Image Source="wallpaper_forest.jpg" />
+                            <ContentView>
+                                <Image Source="wallpaper_forest.jpg" VerticalOptions="Fill" />
+                                
                             </ContentView>
                         </StackLayout>
                     </StackLayout>
-
+                    <Label Grid.Row="0" Grid.Column="0"
+           Text="Bem vindo" 
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="FillAndExpand"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontSize="22"/>
                 </Grid>
             </xct:TabViewItem.Content>
         </xct:TabViewItem>
