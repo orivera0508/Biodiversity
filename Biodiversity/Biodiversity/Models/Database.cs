@@ -312,3 +312,5 @@ namespace Biodiversity.Models
         };
     }
 }
+
+//SELECT ImagePath FROM animals WHERE isNew = True JOIN plants ON isNew = TRUE

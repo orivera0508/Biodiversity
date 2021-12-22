@@ -42,14 +42,14 @@
                             </ContentView>
                         </StackLayout>
                     </StackLayout>
-                    <Label Grid.Row="0" Grid.Column="0"
+                    <!--<Label Grid.Row="0" Grid.Column="0"
            Text="Bem vindo" 
            HorizontalOptions="FillAndExpand"
            VerticalOptions="FillAndExpand"
            HorizontalTextAlignment="Start"
            VerticalTextAlignment="Center"
            TextColor="White" 
-           FontSize="22"/>
+           FontSize="22"/>-->
                 </Grid>
             </xct:TabViewItem.Content>
         </xct:TabViewItem>
