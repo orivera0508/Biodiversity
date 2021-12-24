@@ -13,5 +13,12 @@ namespace Biodiversity.Views
         {
             InitializeComponent();
         }
+
+        void OnEmailClicked(object sender, EventArgs e)
+        {
+            var address = "samdavid2050@gmail.com";
+            var uri = $"mailto:{address}";
+            Launcher.OpenAsync(uri);
+        }
     }
 }
