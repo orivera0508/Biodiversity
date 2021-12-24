@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="Biodiversity.Views.HomePage"
-             Title="{Binding Title}">
+             Title="Home">
 
 
     <ContentPage.Resources>
@@ -26,7 +26,7 @@
     
     <!--Welcome Page-->
     <xct:TabView>
-        <xct:TabViewItem Text="Welcome!" TextColorSelected="Green">
+        <xct:TabViewItem Text="Welcome!" TextColor="White" TextColorSelected="LightGreen" BackgroundColor="{StaticResource Primary}">
             <xct:TabViewItem.Content>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -34,23 +34,31 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
-                    <StackLayout  Grid.Row="1" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BackgroundColor="Black">
+                    <StackLayout  Grid.Row="1" VerticalOptions="Fill" BackgroundColor="Black">
                         <StackLayout>
-                            <ContentView VerticalOptions="FillAndExpand">
-                                <Image Source="wallpaper_forest.jpg" />
+                            <ContentView>
+                                <Image Source="wallpaper_forest.jpg" VerticalOptions="Fill" />
+                                
                             </ContentView>
                         </StackLayout>
                     </StackLayout>
-
+                    <!--<Label Grid.Row="0" Grid.Column="0"
+           Text="Bem vindo" 
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="FillAndExpand"
+           HorizontalTextAlignment="Start"
+           VerticalTextAlignment="Center"
+           TextColor="White" 
+           FontSize="22"/>-->
                 </Grid>
             </xct:TabViewItem.Content>
         </xct:TabViewItem>
 
         <!--Whats New Page-->
-        <xct:TabViewItem Text="What's New" TextColorSelected="Green">
+        <xct:TabViewItem Text="What's New" TextColor="White" TextColorSelected="LightGreen" BackgroundColor="{StaticResource Primary}">
             <xct:TabViewItem.Content>
                 <Grid>
-                    <ListView x:Name="itemListView" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100" ItemTapped="ItemTapped">
+                    <ListView x:Name="itemListView" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" RowHeight="100" ItemTapped="ItemTapped" BackgroundColor="#78b779">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
