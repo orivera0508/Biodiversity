@@ -37,7 +37,7 @@
                     <StackLayout  Grid.Row="1" VerticalOptions="Fill" BackgroundColor="Black">
                         <StackLayout>
                             <ContentView>
-                                <Image Source="wallpaper_forest.jpg" VerticalOptions="Fill" />
+                                <Image Source="welcome.gif" VerticalOptions="Fill" />
                                 
                             </ContentView>
                         </StackLayout>

@@ -80,5 +80,4 @@
     </FlyoutItem>
     <MenuItem Text="Contact us for Help and Feedback" IconImageSource="icon_feed.png" Clicked="OnEmailClicked">
     </MenuItem>
-
 </Shell>
