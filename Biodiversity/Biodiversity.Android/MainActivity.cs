@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading;
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
@@ -21,6 +19,7 @@ namespace Biodiversity.Droid
             string dbName = "biodiversity_db.sqlite";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string fullPath = Path.Combine(folderPath,dbName);
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
 
             LoadApplication(new App(fullPath));
         }
