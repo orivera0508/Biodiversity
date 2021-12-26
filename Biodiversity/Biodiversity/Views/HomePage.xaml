@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              x:Class="Biodiversity.Views.HomePage"
              Title="Home">
 
@@ -28,29 +29,19 @@
     <xct:TabView>
         <xct:TabViewItem Text="Welcome!" TextColor="White" TextColorSelected="LightGreen" BackgroundColor="{StaticResource Primary}">
             <xct:TabViewItem.Content>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
 
-                    <StackLayout  Grid.Row="1" VerticalOptions="Fill" BackgroundColor="Black">
-                        <StackLayout>
-                            <ContentView>
-                                <Image Source="wallpaper_forest.jpg" VerticalOptions="Fill" />
-                                
-                            </ContentView>
-                        </StackLayout>
-                    </StackLayout>
-                    <!--<Label Grid.Row="0" Grid.Column="0"
-           Text="Bem vindo" 
-           HorizontalOptions="FillAndExpand"
-           VerticalOptions="FillAndExpand"
-           HorizontalTextAlignment="Start"
-           VerticalTextAlignment="Center"
-           TextColor="White" 
-           FontSize="22"/>-->
-                </Grid>
+                <StackLayout  VerticalOptions="Fill" BackgroundColor="Black">
+                    <ffimageloading:SvgCachedImage  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill" x:Name="imageWave" Source="wallpaper_forest.jpg" Margin="0"/>
+                            <!--<Image Source="welcome.gif" HeightRequest="300" IsAnimationPlaying="True"/>-->
+                </StackLayout>
+                <!--<Label Grid.Row="0" Grid.Column="0"
+                    Text="Bem vindo" 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center"
+                    TextColor="White" 
+                    FontSize="22"/>-->
             </xct:TabViewItem.Content>
         </xct:TabViewItem>
 
