@@ -7,30 +7,22 @@
 
         <Grid Grid.Row="0" Margin="0,10,0,0">
             <StackLayout  Orientation="Vertical" 
-                      HorizontalOptions="StartAndExpand" 
-                      Margin="30,30" 
-                      VerticalOptions="StartAndExpand">
+                      Margin="30,30" >
 
                 <Label Text="Biodiversity Trivia!" 
                        TextColor="White"
-                       HorizontalOptions="Center"
-                       VerticalOptions="CenterAndExpand" 
                        FontAttributes="Bold"
                        FontFamily="Lobster-Regular"
                        FontSize="20"/>
 
                 <Label Text="Choose the correct response"
                        TextColor="White"
-                       HorizontalOptions="Center"
-                       VerticalOptions="CenterAndExpand"
                        FontAttributes="Italic"
                        FontSize="14"/>
 
                 <Label x:Name="lblpreguntita" 
                        Text="Click Start to Play!" 
                        TextColor="White"
-                       HorizontalOptions="Center"
-                       VerticalOptions="CenterAndExpand"
                        FontSize="12"/>
 
             </StackLayout>
