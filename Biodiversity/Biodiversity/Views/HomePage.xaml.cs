@@ -20,12 +20,10 @@ namespace Biodiversity.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            List<Animal> test = App.database.GetAnimalAsync().Result;
-            List<Plant> test2 = App.database.GetPlantAsync().Result;
-            test.Reverse();
-            test2.Reverse();
+            List<Animal> test = App.database.database.QueryAsync<Animal>("SELECT * FROM animal ORDER BY Id DESC LIMIT 3;").Result;
+            List<Plant> test2 = App.database.database.QueryAsync<Plant>("SELECT * FROM plant ORDER BY Id DESC LIMIT 3;").Result;
             List<New> newList = new List<New>();
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < test.Count; i++)
             {
                 newList.Add(new New()
                 {
