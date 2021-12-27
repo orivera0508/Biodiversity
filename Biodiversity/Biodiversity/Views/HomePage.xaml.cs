@@ -1,7 +1,12 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Biodiversity.Models;
+using System;
+using System.Diagnostics;
+using System.Collections.Generic;
 using System.Linq;
-using Biodiversity.Models;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+using System.Collections.ObjectModel;
+using SQLite;
 
 namespace Biodiversity.Views
 {
@@ -11,10 +16,38 @@ namespace Biodiversity.Views
         {
             InitializeComponent();
         }
-
+        
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+            List<Animal> test = App.database.GetAnimalAsync().Result;
+            List<Plant> test2 = App.database.GetPlantAsync().Result;
+            test.Reverse();
+            test2.Reverse();
+            List<New> newList = new List<New>();
+            for (int i = 0; i < 2; i++)
+            {
+                newList.Add(new New()
+                {
+                    Desc = test[i].Desc,
+                    Id = test[i].Id,
+                    ImagePath = test[i].ImagePath,
+                    Lat = test[i].Lat,
+                    Lng = test[i].Lng,
+                    Name = test[i].Name
+                });
+
+                newList.Add(new New()
+                {
+                    Desc = test2[i].Desc,
+                    Id = test2[i].Id,
+                    ImagePath = test2[i].ImagePath,
+                    Lat = test2[i].Lat,
+                    Lng = test2[i].Lng,
+                    Name = test2[i].Name
+                });
+            }
+            itemListView.ItemsSource = new ObservableCollection<New>(newList);
         }
 
         void OnAnimalClicked(object sender, EventArgs e)
@@ -31,8 +64,8 @@ namespace Biodiversity.Views
 
         void ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            //Item tappedPost = (Item)((ListView)sender).SelectedItem;
-            //Navigation.PushAsync(new PlantDetailPage(tappedPost));
+            New tappedPost = (New)((ListView)sender).SelectedItem;
+            Navigation.PushAsync(new NewDetailPage(tappedPost));
         }
     }
 }
