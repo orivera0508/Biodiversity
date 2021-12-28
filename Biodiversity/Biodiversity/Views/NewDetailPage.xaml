@@ -3,30 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Biodiversity.Views.NewDetailPage">
     <ContentPage.Content>
-        <ScrollView>
-            <Grid RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
+        <ContentView>
+            <ScrollView>
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-                <BoxView Grid.Row="0" Color="#009bd6"/>
-                <StackLayout Grid.Row="0" Spacing="10" Padding="15" VerticalOptions="CenterAndExpand">
-                    <Image Source="{Binding ImagePath}"/>
-                    <Label Text="{Binding Name}" FontSize="Large" TextColor="White" HorizontalOptions="CenterAndExpand"/>
-                </StackLayout>
-                <BoxView Grid.Row="1" Color="#00719c"/>
-                <StackLayout Grid.Row="1" Spacing="20" Padding="15">
-                    <Label Text="General Information" FontSize="Large" TextColor="White"/>
-                    <Label Text="{Binding Desc}" FontSize="Medium" TextColor="White"/>
-                    <Button Text="View Location"             
+                    <BoxView Grid.Row="0" Color="#009bd6"/>
+                    <StackLayout Grid.Row="0" Spacing="10" Padding="15" VerticalOptions="CenterAndExpand">
+                        <Image Source="{Binding ImagePath}"/>
+                        <Label Text="{Binding Name}" FontSize="Large" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <BoxView Grid.Row="1" Color="#00719c"/>
+                    <StackLayout Grid.Row="1" Spacing="20" Padding="15">
+                        <Label Text="General Information" FontSize="Large" TextColor="White"/>
+                        <Label Text="{Binding Desc}" FontSize="Medium" TextColor="White"/>
+                        <Button Text="View Location"             
                         HorizontalOptions="Center"
                         Clicked="OnLocationClicked" />
-                </StackLayout>
-            </Grid>
-        </ScrollView>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </ContentView>
     </ContentPage.Content>
 </ContentPage>
