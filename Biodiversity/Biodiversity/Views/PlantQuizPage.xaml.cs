@@ -99,7 +99,7 @@ namespace Biodiversity.Views
             if (btnresp1.Text == correctResponse)
             {
                 score++;
-                btnresp1.BorderColor = Color.FromName("Red");
+                //btnresp1.BorderColor = Color.FromName("Red");
             }
             point++;
             SetQuestion(point);
