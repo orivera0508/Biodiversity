@@ -4,21 +4,39 @@
              x:Class="Biodiversity.Views.TriviaPage"
              Title="Trivia">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to the Trivia Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
 
-            <Button Text="Take Plant Quiz!"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="Center"
-                Clicked="OnButtonClicked" />
-            
-            <Button Text="Take Animal Quiz!"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="Center"
-                Clicked="OnButton2Clicked" />
-            
-        </StackLayout>
+        <Grid RowSpacing="0" BackgroundColor="#FFA000">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Frame BackgroundColor="#ff7600" Grid.Row="0" Margin="0, 30, 0, 0">
+                <Label TextColor="White" Text="Let's see how much you know"
+                FontSize="Large"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="StartAndExpand"
+                Margin="10,0,0,0"/>
+            </Frame>
+            <StackLayout Grid.Row="1" VerticalOptions="Fill" HorizontalOptions="Fill" Spacing="30" Margin="30,60,30,0">
+                <Button Text="Plant Quiz!"
+                Clicked="OnButtonClicked" 
+                BackgroundColor="#299479"
+                BorderColor="#1b7f7d"
+                BorderWidth="5"
+                CornerRadius="30"
+                FontSize="Medium"/>
+                <Button Text="Animal Quiz!"
+                Clicked="OnButton2Clicked"
+                BackgroundColor="#009bd6"
+                BorderColor="#00719c"
+                BorderWidth="5"
+                CornerRadius="30"
+                FontSize="Medium"/>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
