@@ -20,12 +20,7 @@ namespace Biodiversity.Views
         }
 
         public List<Conservation> conservationList;
-        void OnPlantClicked(object sender, EventArgs e)
-        {
-            ToolbarItem item = (ToolbarItem)sender;
-            Shell.Current.GoToAsync($"//{nameof(PlantPage)}");
-        }
-
+ 
         protected override async void OnAppearing()
         {
             base.OnAppearing();

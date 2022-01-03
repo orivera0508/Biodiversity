@@ -10,6 +10,7 @@ namespace Biodiversity.Views
         public PlantQuizPage()
         {
             InitializeComponent();
+            SetQuestion(1);
         }
 
         public static List<Question> listapreguntas = new List<Question>
@@ -69,21 +70,21 @@ namespace Biodiversity.Views
                 correct = "Puerto Rico Royal Palm"
             }
         };
-        int point = 0, score = 0;
+        int point = 1, score = 0;
         string correctResponse;
 
         private string SetQuestion(int ID)
         {
             Question list = listapreguntas.Where(a => a.Id == ID).SingleOrDefault();
-            if (point != listapreguntas.Count() + 1)
+            if (ID != listapreguntas.Count() + 1)
             {
                 lblpreguntita.Text = list.quest_;
                 btnresp1.Text = list.resp1_;
                 btnresp2.Text = list.resp2_;
                 btnresp3.Text = list.resp3_;
                 btnresp4.Text = list.resp4_;
+                scoreLabel.Text = score + " / " + listapreguntas.Count();
                 correctResponse = list.correct;
-
             }
             else
             {
@@ -99,7 +100,6 @@ namespace Biodiversity.Views
             if (btnresp1.Text == correctResponse)
             {
                 score++;
-                //btnresp1.BorderColor = Color.FromName("Red");
             }
             point++;
             SetQuestion(point);
