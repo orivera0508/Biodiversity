@@ -12,7 +12,7 @@ namespace Biodiversity
 
         void OnEmailClicked(object sender, EventArgs e)
         {
-            var address = "samdavid2050@gmail.com";
+            var address = "biodiversityapp@pupr.edu";
             var uri = $"mailto:{address}";
             Launcher.OpenAsync(uri);
         }
