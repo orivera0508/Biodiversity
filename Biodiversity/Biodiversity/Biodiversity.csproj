@@ -40,6 +40,9 @@
     <Compile Update="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\NewDetailPage.xaml.cs">
+      <DependentUpon>NewDetailPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\ConservationDetailPage.xaml.cs">
       <DependentUpon>ConservationDetailPage.xaml</DependentUpon>
     </Compile>

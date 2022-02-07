@@ -33,6 +33,9 @@ namespace Biodiversity
         {
             InitializeComponent();
             MainPage = new AppShell();
+            database.GetConservationAsync();
+            database.GetAnimalAsync();
+            database.GetPlantAsync();
         }
 
         protected override void OnStart()

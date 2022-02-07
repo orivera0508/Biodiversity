@@ -8,7 +8,7 @@ namespace Biodiversity.Models
 {
     public class Database
     {
-       readonly SQLiteAsyncConnection database;
+        public SQLiteAsyncConnection database;
 
         public Database(string dbPath)
         {
